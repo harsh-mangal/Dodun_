@@ -39,28 +39,25 @@ const news = () => {
     }, []);
 
   return (
-    <div  className="bg-white py-10 px-6">
+    <div  className="bg-white px-2 grid grid-cols-1 md:grid-cols-2 mx-5">
         {/* Title */}
-        <h1 className="text-3xl font-bold text-center text-gray-800 mb-4">
-          Our Latest News
+       <div className='md:my-20 md:mx-20'>
+       <h1 className="text-2xl text-left font-bold text-gray-600 mb-4">
+          Our Blogs
         </h1>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-8">
+        <p className="text-2xl text-align text-black max-w-6xl mx-auto my-5 mb-8">
           Boost your organic traffic and engagement with our campaigns that get
           your business in front of the right people at the right time.
         </p>
+       </div>
 
         {/* News Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="w-90 md:w-180">
           {newsData.map((news, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-xl overflow-hidden hover:scale-105 transition duration-300"
+              className="bg-white gap-10 my-3 md:my-5 border-3 border-gray-300 overflow-hidden hover:scale-105 transition duration-300"
             >
-              <img
-                src={news.img}
-                alt={news.title}
-                className="h-48 w-full object-cover"
-              />
               <div className="p-5">
                 <h3 className="text-lg font-semibold text-gray-800">
                   {news.title}
@@ -72,7 +69,7 @@ const news = () => {
                 >
                   Read More
                 </a>
-                <p className="text-gray-400 text-xs mt-2">{news.date}</p>
+                {/* <p className="text-gray-400 text-xs mt-2">{news.date}</p> */}
               </div>
             </div>
           ))}

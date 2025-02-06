@@ -46,7 +46,7 @@ const service = () => {
   return (
    <>
      <div className="max-w-5xl mx-auto my-35 px-4 py-10 bg-white rounded-lg p-6">
-      <h3 className="text-xl text-center text-gray-600 mb-6">Our Services</h3>
+      <h3 className="text-2xl text-center text-gray-600 mb-6">Our Services</h3>
       <h1 className="text-3xl text-center font-bold text-black mb-6">
         Empowering Innovation, Elevating Businesses – Your Trusted IT Solutions Partner.
       </h1>

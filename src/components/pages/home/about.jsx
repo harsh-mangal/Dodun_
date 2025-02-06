@@ -17,11 +17,11 @@ const about = () => {
       {/* About Section */}
       <div>
         <h2 className="mx-[70px] text-3xl md:text-6xl font-bold text-black">Who We Are!</h2>
-        <div  data-aos="fade-up-left" className="bg-gray-100 visible md:hidden">
+        <div className=" visible md:hidden">
         <img 
           src="https://ik.imagekit.io/jncw2kb8u/annie-spratt-QckxruozjRg-unsplash.jpg?updatedAt=1738668225171" 
           alt="Company Overview" 
-          className="w-full h-70  py-5 object-cover rounded-lg shadow-lg "
+          className="mx-5 w-100  py-5 object-fit  "
         />
       </div>
         <p className="mx-[70px] text-black text-xl md:text-3xl font-semibold mt-3">

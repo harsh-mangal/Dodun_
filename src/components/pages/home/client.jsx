@@ -13,7 +13,7 @@ const client = () => {
       }, []);
 
   return (
-    <div  class="bg-white py-12 px-6">
+    <div  class="bg-white py-30 px-6">
     {/* <!-- Heading Section --> */}
     <div class="text-center mb-10">
       <h1 class="text-3xl font-bold text-gray-800">What Our Clients Say</h1>

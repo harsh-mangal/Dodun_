@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 const footer = () => {
   return (
-    <footer data-aos="fade-up" className="bg-gray-100 py-10 relative">
+    <footer className="bg-gray-100 py-10 relative">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 -px-30 md:px-20">
         <div>
           <img
