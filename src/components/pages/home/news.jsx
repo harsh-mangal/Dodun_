@@ -39,7 +39,7 @@ const news = () => {
     }, []);
 
   return (
-    <div  className="bg-white px-2 grid grid-cols-1 md:grid-cols-2 mx-5">
+    <div  className="bg-white px-2 grid grid-cols-1 md:grid-cols-2 mx-5 overflow-hidden">
         {/* Title */}
        <div className='md:my-20 md:mx-20'>
        <h1 className="text-2xl text-left font-bold text-gray-600 mb-4">
@@ -52,7 +52,7 @@ const news = () => {
        </div>
 
         {/* News Cards Grid */}
-        <div className="w-90 md:w-180">
+        <div data-aos="fade-down-left" className="w-90 md:w-180">
           {newsData.map((news, index) => (
             <div
               key={index}

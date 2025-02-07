@@ -1,7 +1,7 @@
 import React, { useState, useEffect  } from "react";
 import { Menu, X } from "lucide-react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -53,12 +53,12 @@ function Navbar() {
     setIs_Open(!is_Open);
   };
 
-  useEffect(() => {
-        AOS.init({
-          duration: 1000, // Animation duration in milliseconds
-          once: true, // Whether animation should happen only once
-        });
-      }, []);
+  // useEffect(() => {
+  //       AOS.init({
+  //         duration: 1000, // Animation duration in milliseconds
+  //         once: true, // Whether animation should happen only once
+  //       });
+  //     }, []);
 
   return (
     <nav className="relative w-full z-50 bg-white border-b border-gray-300 ">

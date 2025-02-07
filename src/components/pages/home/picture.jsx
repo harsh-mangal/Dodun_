@@ -18,7 +18,7 @@ const picture = () => {
           class="w-full h-full object-cover opacity-50"
         /> */}
 
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:gap-10 ">
+        <div data-aos="fade-right" class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 md:gap-10 ">
           <h1 class="text-2xl md:text-4xl lg:text-5xl font-bold text-black drop-shadow-md">
             Crafting Your Unique Digital Story, Our Way!
           </h1>
