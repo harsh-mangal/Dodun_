@@ -72,7 +72,7 @@ const service = () => {
           >
             {hoverIndex === index && (
               <div className="p-6 bg-gray-50 rounded-lg border-b border-gray-300">
-                <p className="mb-4 text-gray-700 text-lg items-center">{service.description}</p>
+                <p className="mb-4 mx-5 text-gray-700 text-lg text-left items-center">{service.description}</p>
               </div>
             )}
           </motion.div>
