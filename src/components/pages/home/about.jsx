@@ -23,7 +23,7 @@ const about = () => {
             <img
               src="https://ik.imagekit.io/jncw2kb8u/annie-spratt-QckxruozjRg-unsplash.jpg?updatedAt=1738668225171"
               alt="Company Overview"
-              className="mx-5 w-100  py-5 object-fit  "
+              className="mx-5 w-80 md:w-100  py-5 object-fit"
             />
           </div>
           <p className="mx-[70px] text-black text-xl md:text-3xl font-semibold mt-3">

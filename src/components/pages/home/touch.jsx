@@ -13,7 +13,7 @@ const touch = () => {
 
   return (
     <div class="bg-white text-black py-12 px-6 mt-20 overflow-hidden">
-      <div data-aos="zoom-out-up">
+      <div>
         {/* <!-- Heading Section --> */}
       <div class="text-center mb-8">
         <h2 class="text-3xl font-bold">Get In Touch With Us</h2>
@@ -25,7 +25,7 @@ const touch = () => {
 
       {/* <!-- Form Container --> */}
       <div class="max-w-3xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
-        <form class="space-y-6">
+        <form data-aos="fade-right" class="space-y-6">
           {/* <!-- First & Last Name --> */}
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>

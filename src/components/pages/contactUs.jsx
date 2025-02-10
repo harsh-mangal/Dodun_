@@ -7,55 +7,28 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const contactUs = () => {
-
-  const contactDetails = [
+  const contactInfo = [
     {
-      icon: <MapPin className="text-sky-300" />, 
-      title: "Address",
-      info: "GM Plaza, Phase -7 Industrial Area, Sector-73, Mohali, India",
-      animation: "fade-up",
+      icon: "fa-envelope",
+      title: "Chat to us",
+      description: "Our friendly team is here to help.",
+      link: "mailto:dodunsoftsolutions@gmail.com",
+      linkText: "dodunsoftsolutions@gmail.com",
     },
     {
-      icon: <Phone className="text-sky-300" />, 
-      title: "Call Us",
-      info: "+91-8968881110",
-      animation: "fade-down",
+      icon: "fa-location-dot",
+      title: "Office",
+      description:
+        "GM Plaza, Phase -7 Industrial Area, Sector-73, Mohali, India",
     },
     {
-      icon: <Mail className="text-sky-300" />, 
-      title: "Email Us",
-      info: "dodunsoftsolutions@gmail.com",
-      animation: "fade-up",
-    },
-    {
-      icon: <Clock className="text-sky-300" />, 
-      title: "Business Hours",
-      info: (
-        <>
-          <p className="text-gray-700">Monday-Friday: 9:00 AM – 6:00 PM</p>
-          <p className="text-gray-700">Saturday: 10:00 AM – 4:00 PM</p>
-          <p className="text-gray-700">Sunday: Closed</p>
-        </>
-      ),
-      animation: "fade-down",
+      icon: "fa-phone",
+      title: "Phone",
+      description: "Mon-Fri from 9am to 6pm \n Sat from 10am to 4pm",
+      link: "tel:+91-8968881110",
+      linkText: "+91-8968881110",
     },
   ];
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted", formData);
-    // Add form submission logic here
-  };
 
   useEffect(() => {
     AOS.init({
@@ -66,89 +39,98 @@ const contactUs = () => {
   return (
     <>
       <Navbar />
-      <div className="grid grid-cols-1 mt-10 md:mx-20 md:grid-cols-2 lg:grid-cols-4 bg-white py-10 px-6 gap-6">
-      {contactDetails.map((item, index) => (
-        <div
-          key={index}
-          data-aos={item.animation}
-          className="bg-white rounded-lg shadow-md flex flex-col md:flex-row items-center space-x-4 p-6"
-        >
-          {item.icon}
-          <div>
-            <h4 className="text-lg font-semibold text-center md:text-left">{item.title}</h4>
-            <p className="text-gray-700 text-center md:text-left">{item.info}</p>
-          </div>
+      <div className="bg-white p-6 md:p-10">
+        {/* Heading section */}
+        <div data-aos="fade-down" className="text-center mb-8 md:mb-10">
+          <h1 className="text-2xl md:text-3xl font-bold">Contact Us</h1>
+          <p className="text-gray-600 mt-2 text-sm md:text-base">
+            See Your Digital Transformative Growth With Us. Get all your
+            questions answered by our business development team.
+          </p>
         </div>
-      ))}
-    </div>
 
-      <div className="min-h-screen bg-white flex items-center justify-center p-6">
-        <div
-          data-aos="fade-right"
-          className="w-full max-w-4xl bg-slate-300 shadow-lg rounded-2xl p-8"
-        >
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-            Contact Us
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="block text-gray-700">Name</label>
+        {/* Contact Info Section */}
+        <div data-aos="fade-down" className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left px-4 md:mx-45">
+          {contactInfo.map((item, index) => (
+            <div
+              key={index}
+              className="p-6 bg-white shadow-md border-4 border-gray-400 transition-transform duration-300 hover:scale-105 hover:shadow-lg mx-auto rounded-lg md:mx-0 w-full max-w-sm"
+            >
+              <i
+                className={`fa-solid ${item.icon} text-yellow-500 text-3xl`}
+              ></i>
+              <h2 className="text-xl font-semibold mt-3">{item.title}</h2>
+              <p className="text-gray-600 whitespace-pre-line">
+                {item.description}
+              </p>
+              {item.link && (
+                <a href={item.link} className="text-blue-500 hover:underline">
+                  {item.linkText}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Map Section */}
+        <div className="mt-10 px-4 flex justify-center">
+          <iframe
+            className="w-full md:w-3/4 h-64 md:h-96 border rounded-lg"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d714.3050127920549!2d76.69969712989423!3d30.713347056154703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1739168399841!5m2!1sen!2sin"
+            allowFullScreen
+            loading="lazy"
+            title="Google Maps"
+          ></iframe>
+        </div>
+
+        {/* Contact Form Section */}
+        <div className="bg-blue-200 p-6 md:p-10 mt-10 md:mx-50 rounded-lg flex flex-col md:flex-row items-center overflow-hidden">
+          <div data-aos="fade-up-right" className="w-full md:w-1/2">
+            <img
+              src="https://ik.imagekit.io/jncw2kb8u/blog-listing-hero.svg?updatedAt=1739170233142"
+              alt="Contact Illustration"
+              className="w-full"
+            />
+          </div>
+          <div  data-aos="fade-up-left" className="w-full md:w-1/2 p-6">
+            <label className="block text-lg font-semibold">Email</label>
+            <input
+              type="email"
+              placeholder="Enter a valid email address"
+              className="w-full p-2 border rounded-md mt-2"
+            />
+
+            <div className="flex flex-col md:flex-row md:space-x-4 mt-4">
+              <div className="w-full md:w-1/2">
+                <label className="block text-lg font-semibold">
+                  First Name
+                </label>
                 <input
                   type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full mt-1 p-3 border rounded-lg focus:ring focus:ring-blue-200"
+                  placeholder="Enter your first name"
+                  className="w-full p-2 border rounded-md mt-2"
                 />
               </div>
-              <div>
-                <label className="block text-gray-700">Email</label>
+              <div className="w-full md:w-1/2 mt-4 md:mt-0">
+                <label className="block text-lg font-semibold">Last Name</label>
                 <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full mt-1 p-3 border rounded-lg focus:ring focus:ring-blue-200"
+                  type="text"
+                  placeholder="Enter your last name"
+                  className="w-full p-2 border rounded-md mt-2"
                 />
-              </div>
-              <div>
-                <label className="block text-gray-700">Message</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="w-full mt-1 p-3 border rounded-lg focus:ring focus:ring-blue-200"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-sky-700 text-white py-3 rounded-lg hover:bg-blue-700"
-              >
-                Send Message
-              </button>
-            </form>
-            <div data-aos="fade-left" className="space-y-6">
-              <div className="flex items-center space-x-4 p-5">
-                <MapPin className="text-sky-300" />
-                <span className="text-gray-700">
-                  GM Plaza, Phase -7 Industrial Area, Sector-73, Mohali, India
-                </span>
-              </div>
-              <div className="flex items-center space-x-4 p-5">
-                <Phone className="text-sky-300" />
-                <span className="text-gray-700">+91-8968881110</span>
-              </div>
-              <div className="flex items-center space-x-4 p-5">
-                <Mail className="text-sky-300" />
-                <span className="text-gray-700">
-                  dodunsoftsolutions@gmail.com
-                </span>
               </div>
             </div>
+
+            <label className="block text-lg font-semibold mt-4">Message</label>
+            <textarea
+              placeholder="Enter your message"
+              className="w-full p-2 border rounded-md mt-2"
+              rows="4"
+            ></textarea>
+
+            <button className="w-full mt-4 p-3 bg-yellow-500 text-white rounded-md font-bold transition-all duration-300 hover:bg-yellow-600 hover:scale-105">
+              Submit
+            </button>
           </div>
         </div>
       </div>

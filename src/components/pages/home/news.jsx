@@ -52,7 +52,7 @@ const news = () => {
        </div>
 
         {/* News Cards Grid */}
-        <div data-aos="fade-down-left" className="w-90 md:w-180">
+        <div data-aos="fade-down-left" className="w-80 md:w-180">
           {newsData.map((news, index) => (
             <div
               key={index}
