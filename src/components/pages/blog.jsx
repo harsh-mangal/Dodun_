@@ -15,7 +15,7 @@ const blog = () => {
   return (
     <>
       <Navbar />
-      <div className="relative w-full h-[500px] flex items-center justify-center text-center">
+      <div className="relative manrope w-full h-[500px] flex items-center justify-center text-center">
         {/* Background Image */}
         <img
           src="https://ik.imagekit.io/jncw2kb8u/freepik__upload__47918.jpg?updatedAt=1738397180033"
@@ -25,7 +25,7 @@ const blog = () => {
         {/* Overlay Content */}
         <h1
           data-aos="fade-right"
-          className="relative text-black text-4xl md:text-5xl font-bold"
+          className="relative text-gray-700 text-4xl md:text-5xl font-bold"
         >
           OUR BLOGS
         </h1>
@@ -122,110 +122,6 @@ const blog = () => {
                   Read More →
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer Section */}
-        <div
-          data-aos="flip-down"
-          className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mt-12"
-        >
-          {/* Latest Posts */}
-          <div className="bg-gradient-to-r from-sky-300 to-blue-600 rounded-lg hover:scale-105 transition duration-300 shadow-lg hover:shadow-3xl">
-            <div className="bg-white rounded-[calc(1rem-10px)] p-[40px] m-1">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">
-                LATEST POSTS
-              </h2>
-              <ol className="space-y-2 text-gray-700">
-                <li>
-                  <a href="/first" className="hover:text-blue-600">
-                    The Ultimate Email Marketing Guide for Beginners
-                  </a>
-                </li>
-                <li>
-                  <a href="/second" className="hover:text-blue-600">
-                    Maximize Your PPC Performance | 6 Proven Strategies
-                  </a>
-                </li>
-                <li>
-                  <a href="/third" className="hover:text-blue-600">
-                    Navigating the Digital Landscape | 5 Challenges
-                  </a>
-                </li>
-              </ol>
-            </div>
-          </div>
-
-          {/* Our Services */}
-          <div className="bg-gradient-to-r from-sky-300 to-blue-600 rounded-lg hover:scale-105 transition duration-300 shadow-lg hover:shadow-3xl">
-            <div className="bg-white rounded-[calc(1rem-10px)] p-[44px] m-1">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">
-                OUR SERVICES
-              </h2>
-              <ol className="space-y-2 text-gray-700">
-                <li>
-                  <a href="#" className="hover:text-blue-600">
-                    Digital Marketing
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-blue-600">
-                    Designing
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-blue-600">
-                    Development
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-blue-600">
-                    Hosting
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-blue-600">
-                    Animated Videos
-                  </a>
-                </li>
-              </ol>
-            </div>
-          </div>
-
-          {/* Categories */}
-          <div className="bg-gradient-to-r from-sky-300 to-blue-600 rounded-lg hover:scale-105 transition duration-300 shadow-lg hover:shadow-3xl">
-            <div className="bg-white rounded-[calc(1rem-10px)] p-[44px] m-1">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">
-                CATEGORIES
-              </h2>
-              <ol className="space-y-2 text-gray-700">
-                <li>
-                  <a href="#" className="hover:text-blue-600">
-                    Digital Marketing
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-blue-600">
-                    Email Marketing
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-blue-600">
-                    Performance Marketing
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-blue-600">
-                    PPC
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-blue-600">
-                    SEO
-                  </a>
-                </li>
-              </ol>
             </div>
           </div>
         </div>

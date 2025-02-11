@@ -39,7 +39,7 @@ const contactUs = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-white p-6 md:p-10">
+      <div className="bg-white manrope p-6 md:p-10">
         {/* Heading section */}
         <div data-aos="fade-down" className="text-center mb-8 md:mb-10">
           <h1 className="text-2xl md:text-3xl font-bold">Contact Us</h1>

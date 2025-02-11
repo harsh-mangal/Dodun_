@@ -61,7 +61,7 @@ function Navbar() {
   //     }, []);
 
   return (
-    <nav className="relative w-full z-50 bg-white border-b border-gray-300 ">
+    <nav className="relative manrope w-full z-50 bg-white border-b border-gray-300 ">
       <div className="container mx-auto flex items-center justify-between px-4">
         <a href="/">
         <img

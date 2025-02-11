@@ -5,7 +5,7 @@ import { FaFacebook, FaWhatsapp, FaLinkedin, FaInstagram } from "react-icons/fa"
 
 const footer = () => {
   return (
-    <footer className="bg-white py-10 relative overflow-hidden">
+    <footer className="manrope bg-white py-10 relative overflow-hidden">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 -px-30 md:px-20">
         <div>
           <img

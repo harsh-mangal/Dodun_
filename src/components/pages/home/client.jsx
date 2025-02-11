@@ -23,13 +23,13 @@ const client = () => {
       </div>
 
       {/* <!-- Testimonials Grid --> */}
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:w-200 mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:w-300 mx-auto">
         {/* <!-- Testimonial 1 --> */}
-        <div class="bg-white border-3 border-blue-600 p-6 shadow-md rounded-lg flex">
+        <div class="bg-white border-3 border-blue-600 p-6 shadow-md flex">
           <div>
             <img
               src="https://ik.imagekit.io/jncw2kb8u/client3.jpg?updatedAt=1738850172943"
-              class="mt-5 w-50 h-30 md:w-[600px] md:h-[90px] md:mt-10 object-fit md:rounded-full"
+              class="mt-5 w-50 h-30 md:w-[600px] md:h-[150px] md:mt-5 object-fit md:rounded-full"
             />
           </div>
           <div class="ml-10">
@@ -46,11 +46,11 @@ const client = () => {
         </div>
 
         {/* <!-- Testimonial 2 --> */}
-        <div class="bg-white border-3 border-blue-600 p-6 shadow-md rounded-lg flex">
+        <div class="bg-white border-3 border-blue-600 p-6 shadow-md flex">
           <div>
             <img
               src="https://ik.imagekit.io/jncw2kb8u/client1.jpg?updatedAt=1738850173431"
-              class="mt-5 w-50 h-30 md:w-[600px] md:h-[90px] md:mt-10 object-fit md:rounded-full"
+              class="mt-5 w-50 h-30 md:w-[600px] md:h-[150px] md:mt-5 object-fit md:rounded-full"
             />
           </div>
           <div class="ml-10">
@@ -69,11 +69,11 @@ const client = () => {
         </div>
 
         {/* <!-- Testimonial 3 --> */}
-        <div class="bg-white border-3 border-blue-600 p-6 shadow-md rounded-lg flex">
+        <div class="bg-white border-3 border-blue-600 p-6 shadow-md flex">
           <div>
             <img
               src="https://ik.imagekit.io/jncw2kb8u/client2.jpg?updatedAt=1738850172982"
-              class="mt-5 w-50 h-30 md:w-[600px] md:h-[90px] md:mt-10 object-fit md:rounded-full"
+              class="mt-5 w-50 h-30 md:w-[600px] md:h-[150px] md:mt-5 object-fit md:rounded-full"
             />
           </div>
           <div class="ml-10">
@@ -90,11 +90,11 @@ const client = () => {
         </div>
 
         {/* <!-- Testimonial 4 --> */}
-        <div class="bg-white border-3 border-blue-600 p-6 shadow-md rounded-lg flex">
+        <div class="bg-white border-3 border-blue-600 p-6 shadow-md flex">
           <div>
             <img
               src="https://ik.imagekit.io/jncw2kb8u/stylish-indian-man-posing-in-a-bokeh-background-egup76ldmxa7niih.jpg?updatedAt=1738926586588"
-              class="mt-5 w-50 h-30 md:w-[600px] md:h-[90px] md:mt-10 object-fit md:rounded-full"
+              class="mt-5 w-50 h-30 md:w-[600px] md:h-[150px] md:mt-5 object-fit md:rounded-full"
             />
           </div>
           <div class="ml-10">

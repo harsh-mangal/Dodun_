@@ -15,7 +15,7 @@ const aboutUs = () => {
   return (
     <>
       <Navbar />
-      <div className="max-w-5xl mx-auto p-8 mt-5">
+      <div className="max-w-5xl manrope mx-auto p-8 mt-5">
         <h2
           data-aos="zoom-in"
           className="text-4xl font-bold text-black text-center"
