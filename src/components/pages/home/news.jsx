@@ -2,6 +2,7 @@ import React from 'react'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 const news = () => {
   const newsData = [
@@ -63,12 +64,12 @@ const news = () => {
                   {news.title}
                 </h3>
                 <p className="text-gray-600 text-sm mt-2">{news.description}</p>
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="text-blue-500 font-medium inline-block mt-3 hover:underline"
                 >
                   Read More
-                </a>
+                </Link>
                 {/* <p className="text-gray-400 text-xs mt-2">{news.date}</p> */}
               </div>
             </div>

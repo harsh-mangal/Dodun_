@@ -4,6 +4,7 @@ import Footer from "../footer/footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const blog = () => {
   useEffect(() => {
@@ -56,12 +57,12 @@ const blog = () => {
                   Email marketing remains one of the most effective ways to
                   reach your audience, nurture leads, and drive conversions...
                 </p>
-                <a
-                  href="/first"
+                <Link
+                  to="/first"
                   className="text-blue-600 font-medium mt-4 inline-block hover:underline"
                 >
                   Read More →
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -85,12 +86,12 @@ const blog = () => {
                   PPC advertising remains one of the most effective strategies
                   for driving targeted traffic and conversions...
                 </p>
-                <a
-                  href="/second"
+                <Link
+                  to="/second"
                   className="text-blue-600 font-medium mt-4 inline-block hover:underline"
                 >
                   Read More →
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -115,12 +116,12 @@ const blog = () => {
                   ever-evolving landscape filled with opportunities and
                   challenges...
                 </p>
-                <a
-                  href="/third"
+                <Link
+                  to="/third"
                   className="text-blue-600 font-medium mt-4 inline-block hover:underline"
                 >
                   Read More →
-                </a>
+                </Link>
               </div>
             </div>
           </div>

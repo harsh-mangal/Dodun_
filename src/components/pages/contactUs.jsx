@@ -64,9 +64,9 @@ const contactUs = () => {
                 {item.description}
               </p>
               {item.link && (
-                <a href={item.link} className="text-blue-500 hover:underline">
+                <Link to={item.link} className="text-blue-500 hover:underline">
                   {item.linkText}
-                </a>
+                </Link>
               )}
             </div>
           ))}

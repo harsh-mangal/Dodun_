@@ -63,21 +63,21 @@ function Navbar() {
   return (
     <nav className="relative manrope w-full z-50 bg-white border-b border-gray-300 ">
       <div className="container mx-auto flex items-center justify-between px-4">
-        <a href="/">
+        <Link to ="/">
         <img
           src="https://ik.imagekit.io/jncw2kb8u/image.png?updatedAt=1738665004511"
           alt="Logo"
           className="h-20 w-50"
           
         />
-        </a>
+        </Link>
         <div className="hidden md:flex space-x-6">
-          <a href="/" className="text-black hover:text-blue-500">
+          <Link to="/" className="text-black hover:text-blue-500">
             Home
-          </a>
-          <a href="/about" className="text-black hover:text-blue-500">
+          </Link>
+          <Link to="/about" className="text-black hover:text-blue-500">
             About Us
-          </a>
+          </Link>
           <div className="relative inline-block text-left hover:cursor-pointer">
       <button
         className=" text-black rounded-lg flex items-center gap-2 hover:text-blue-500"
@@ -122,12 +122,12 @@ function Navbar() {
       </div>
       )}
     </div>
-          <a href="/blog" className="text-black hover:text-blue-500">
+          <Link to="/blog" className="text-black hover:text-blue-500">
             Blog
-          </a>
-          <a href="/contact" className="text-black hover:text-blue-500">
+          </Link>
+          <Link to="/contact" className="text-black hover:text-blue-500">
             Contact Us
-          </a>
+          </Link>
         </div>
         <button className="hidden md:block border-2 border-balck text-balck px-4 py-2 rounded-lg hover:scale-115 transition duration-300">
           +91-8968881110
@@ -138,12 +138,12 @@ function Navbar() {
       </div>
       {isOpen && (
         <div className="md:hidden bg-gray-200 p-4 space-y-2 shadow-lg">
-          <a href="/" className="block text-gray-800 hover:text-blue-500">
+          <Link to="/" className="block text-gray-800 hover:text-blue-500">
             Home
-          </a>
-          <a href="/about" className="block text-gray-800 hover:text-blue-500">
+          </Link>
+          <Link to="/about" className="block text-gray-800 hover:text-blue-500">
             About Us
-          </a>
+          </Link>
           <div className="relative inline-block text-left hover:cursor-pointer">
       <button
         className="text-black rounded-lg flex items-center gap-2 hover:text-blue-500 focus:outline-none"
@@ -189,15 +189,15 @@ function Navbar() {
       )}
     </div>
 
-          <a href="/blog" className="block text-gray-800 hover:text-blue-500">
+          <Link to="/blog" className="block text-gray-800 hover:text-blue-500">
             Blog
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="block text-gray-800 hover:text-blue-500"
           >
             Contact Us
-          </a>
+          </Link>
           <button className="w-full bg-blue-500 text-white px-4 py-2 rounded-lg">
             +91-8968881110
           </button>

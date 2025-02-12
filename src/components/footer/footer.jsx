@@ -2,6 +2,7 @@ import React from 'react'
 import { FaFacebook, FaWhatsapp, FaLinkedin, FaInstagram } from "react-icons/fa";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const footer = () => {
   return (
@@ -19,30 +20,30 @@ const footer = () => {
           </p>
           <h3 className="mt-4 mx-5 font-bold">Follow Us</h3>
           <div className="flex space-x-4 mt-2 mx-5">
-            <a href="#" className="text-blue-500 text-lg"><FaFacebook /></a>
-            <a href="#" className="text-pink-500 text-lg"><FaInstagram /></a>
-            <a href="#" className="text-blue-700 text-lg"><FaLinkedin /></a>
-            <a href="#" className="text-green-500 text-lg"><FaWhatsapp /></a>
+            <Link to="#" className="text-blue-500 text-lg"><FaFacebook /></Link>
+            <Link to="#" className="text-pink-500 text-lg"><FaInstagram /></Link>
+            <Link to="#" className="text-blue-700 text-lg"><FaLinkedin /></Link>
+            <Link to="#" className="text-green-500 text-lg"><FaWhatsapp /></Link>
           </div>
         </div>
         <div className='mt-10 mx-5'>
           <h3 className="font-bold">Quick Navigation</h3>
           <ul className="text-gray-600 mt-2 space-y-1">
-            <li><a href="/" className="hover:text-blue-500">Home</a></li>
-            <li><a href="/about" className="hover:text-blue-500">About Us</a></li>
-            <li><a href="/services" className="hover:text-blue-500">Service</a></li>
-            <li><a href="/blog" className="hover:text-blue-500">Blog</a></li>
-            <li><a href="/contact" className="hover:text-blue-500">Contact Us</a></li>
+            <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
+            <li><Link to="/about" className="hover:text-blue-500">About Us</Link></li>
+            <li><Link to="/services" className="hover:text-blue-500">Service</Link></li>
+            <li><Link to="/blog" className="hover:text-blue-500">Blog</Link></li>
+            <li><Link to="/contact" className="hover:text-blue-500">Contact Us</Link></li>
           </ul>
         </div>
         <div className='mt-10 mx-5'>
           <h3 className="font-bold">Our Services</h3>
           <ul className="text-gray-600 mt-2 space-y-1">
-            <li><a href="#home" className="hover:text-blue-500">Digital Marketing</a></li>
-            <li><a href="#about" className="hover:text-blue-500">Designing</a></li>
-            <li><a href="#blog" className="hover:text-blue-500">Development</a></li>
-            <li><a href="#contact" className="hover:text-blue-500">Hosting</a></li>
-            <li><a href="#contact" className="hover:text-blue-500">Animated Videos</a></li>
+            <li><Link to="#home" className="hover:text-blue-500">Digital Marketing</Link></li>
+            <li><Link to="#about" className="hover:text-blue-500">Designing</Link></li>
+            <li><Link to="#blog" className="hover:text-blue-500">Development</Link></li>
+            <li><Link to="#contact" className="hover:text-blue-500">Hosting</Link></li>
+            <li><Link to="#contact" className="hover:text-blue-500">Animated Videos</Link></li>
           </ul>
         </div>
         <div className='mt-10 mx-5'>

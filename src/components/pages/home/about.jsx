@@ -2,6 +2,7 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const about = () => {
   useEffect(() => {
@@ -41,7 +42,7 @@ const about = () => {
             integration and optimal efficiency.
           </p>
           <button className="mx-[70px] mt-6 bg-gradient-to-r from-sky-600 to-blue-800 text-white px-6 py-2 rounded-lg shadow-md hover:scale-110 transition delay-200 duration-300 ease-in-out">
-            <a href="/about">Read More</a>
+            <Link to="/about">Read More</Link>
           </button>
         </div>
 
