@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const contactUs = () => {
   const contactInfo = [
@@ -50,7 +51,10 @@ const contactUs = () => {
         </div>
 
         {/* Contact Info Section */}
-        <div data-aos="fade-down" className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left px-4 md:mx-45">
+        <div
+          data-aos="fade-down"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left px-4 md:mx-45"
+        >
           {contactInfo.map((item, index) => (
             <div
               key={index}
@@ -92,14 +96,7 @@ const contactUs = () => {
               className="w-full"
             />
           </div>
-          <div  data-aos="fade-up-left" className="w-full md:w-1/2 p-6">
-            <label className="block text-lg font-semibold">Email</label>
-            <input
-              type="email"
-              placeholder="Enter a valid email address"
-              className="w-full p-2 border rounded-md mt-2"
-            />
-
+          <div data-aos="fade-up-left" className="w-full md:w-1/2 p-6">
             <div className="flex flex-col md:flex-row md:space-x-4 mt-4">
               <div className="w-full md:w-1/2">
                 <label className="block text-lg font-semibold">
@@ -120,6 +117,20 @@ const contactUs = () => {
                 />
               </div>
             </div>
+
+            <label className="block text-lg font-semibold mt-2">Email</label>
+            <input
+              type="email"
+              placeholder="Enter a valid email address"
+              className="w-full p-2 border rounded-md mt-2"
+            />
+
+            <label className="block text-lg font-semibold mt-2">Phone no.</label>
+            <input
+              type="tel"
+              placeholder="Enter a valid email address"
+              className="w-full p-2 border rounded-md mt-2"
+            />
 
             <label className="block text-lg font-semibold mt-4">Message</label>
             <textarea
