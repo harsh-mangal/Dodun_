@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const who = () => {
   return (
     <>
-      <div className="manrope relative w-full h-330  md:h-[500px] lg:h-200">
+      <div className="manrope relative w-full h-380  md:h-[500px] lg:h-200">
         {/* Background img */}
         <img
           src="https://ik.imagekit.io/jncw2kb8u/about-bg.jpg?updatedAt=1739274067847"

@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 
 const techStack = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const imagesPerSlide = 5;
+  const [imagesPerSlide, setImagesPerSlide] = useState(
+    window.innerWidth < 1024 ? 3 : 5
+  );
   const images = [
     "https://ik.imagekit.io/jncw2kb8u/technologies-5.png?updatedAt=1738577529737",
     "https://ik.imagekit.io/jncw2kb8u/technologies-4.png?updatedAt=1738577529740",
@@ -41,6 +43,7 @@ const techStack = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setImagesPerSlide(window.innerWidth < 1024 ? 3 : 5);
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
     }, 3000); // Auto-slide every 3 seconds
     return () => clearInterval(interval);

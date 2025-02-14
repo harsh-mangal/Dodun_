@@ -64,7 +64,7 @@ const client = () => {
                 key={idx}
                 src={person.image}
                 alt={person.name}
-                className={`w-30 h-40 rounded-full border-6 ${
+                className={`w-20 h-20 md:w-30 md:h-40 rounded-full border-6 ${
                   idx === activeIndex ? "border-blue-500" : "border-gray-300"
                 }`}
               />
@@ -74,7 +74,10 @@ const client = () => {
           {/* Swiper for Testimonials */}
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
-            navigation
+            navigation={{
+              nextEl: ".custom-next",
+              prevEl: ".custom-prev",
+            }}
             pagination={{ clickable: true }}
             autoplay={{ delay: 4000 }}
             loop={true}
@@ -82,10 +85,10 @@ const client = () => {
             className="mt-6"
           >
             {testimonials.map((testimonial, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="">
                 <div className="p-8">
                   {/* Quote and Text */}
-                  <p className="text-gray-600 italic text-xl max-w-2xl mx-auto">
+                  <p className="text-gray-600 italic texy-lg md:text-xl max-w-2xl mx-auto">
                     "{testimonial.text}"
                   </p>
 
@@ -102,13 +105,18 @@ const client = () => {
                   </div>
 
                   {/* Name and Role */}
-                  <h3 className=" font-semibold text-lg">
-                    {testimonial.name}
-                  </h3>
+                  <h3 className=" font-semibold text-lg">{testimonial.name}</h3>
                   <p className="text-sm text-gray-500">{testimonial.role}</p>
                 </div>
               </SwiperSlide>
             ))}
+            {/* Custom Navigation Buttons */}
+            <div className="custom-prev absolute left-0 md:left-20 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-gray-600 text-xs md:text-lg p-2 bg-white shadow-md rounded-full w-5 h-5 md:w-16 md:h-16 flex items-center justify-center hover:bg-sky-300">
+              ❮
+            </div>
+            <div className="custom-next absolute right-0 md:right-20 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer text-gray-600 text-xs md:text-lg p-2 bg-white shadow-md rounded-full w-5 h-5 md:w-16 md:h-16 flex items-center justify-center hover:bg-sky-300">
+              ❯
+            </div>
           </Swiper>
         </div>
       </div>

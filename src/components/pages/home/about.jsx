@@ -13,7 +13,7 @@ const about = () => {
   }, []);
 
   return (
-    <div className="bg-white h-250 py-16  md:h-130 overflow-hidden">
+    <div className="bg-white h-300 py-16  md:h-130 overflow-hidden">
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
         {/* About Section */}
         <div data-aos="fade-up-right">

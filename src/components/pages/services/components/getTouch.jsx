@@ -1,7 +1,34 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 const getTouch = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName:"",
+    email: "",
+    phoneNumber:""
+  });
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setResponseMessage(""); // Reset response message
+
+    try {
+      const res = await axios.post("http://localhost:3000/submit", formData);
+      setResponseMessage(res.data.success);
+      setFormData({ firstName: "", lastName: "", email: "", phoneNumber: "" }); // Reset form
+    } catch (error) {
+      setResponseMessage(error.response?.data?.error || "An error occurred!");
+    }
+  };
+
+
   const [offsetY, setOffsetY] = useState(0);
 
   // Track the scroll position
@@ -44,7 +71,7 @@ const getTouch = () => {
 
             {/* Form Container */}
             <div className="max-w-3xl mx-auto p-4 md:p-8">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* First & Last Name */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -55,6 +82,10 @@ const getTouch = () => {
                       type="text"
                       placeholder="Enter Your First Name"
                       className="w-full px-4 py-3 text-white bg-transparent border-2 border-white focus:ring-2 focus:ring-blue-500 outline-none"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                   <div>
@@ -65,6 +96,10 @@ const getTouch = () => {
                       type="text"
                       placeholder="Enter Your Last Name"
                       className="w-full px-4 py-3 text-white bg-transparent border-2 border-white focus:ring-2 focus:ring-blue-500 outline-none"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                 </div>
@@ -78,23 +113,31 @@ const getTouch = () => {
                     type="email"
                     placeholder="Enter a valid Email Address"
                     className="w-full px-4 py-3 text-white bg-transparent border-2 border-white focus:ring-2 focus:ring-blue-500 outline-none"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
 
                 {/* Phone Number */}
                 <div>
                   <label className="block text-lg md:text-xl text-white mb-1">
-                    Phone No.
+                    Phone Number
                   </label>
                   <input
                     type="tel"
                     placeholder="Enter Your Phone Number"
                     className="w-full px-4 py-3 text-white bg-transparent border-2 border-white focus:ring-2 focus:ring-blue-500 outline-none"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
 
                 {/* Submit Button */}
-                <button className="w-full text-lg md:text-xl text-white border-2 border-white hover:scale-105 py-3 rounded-md font-medium transition-all duration-300">
+                <button type="submit" className="w-full text-lg md:text-xl text-white border-2 border-white hover:scale-105 py-3 rounded-md font-medium transition-all duration-300">
                   Submit
                 </button>
               </form>

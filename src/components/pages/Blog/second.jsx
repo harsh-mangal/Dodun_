@@ -263,7 +263,7 @@ const second = () => {
 
       {/* Button */}
       <div className="flex justify-end border-b border-black">
-        <div className="w-full sm:w-80 p-4 mx-0 sm:mx-60">
+        <div className="w-full p-4 sm:mx-60">
           <Link
             to="/first"
             className="flex items-center gap-3 bg-sky-800 hover:scale-105 transition p-3 shadow-md"
@@ -271,12 +271,12 @@ const second = () => {
             <ArrowLeft className="w-5 h-5 text-white" />
             <p className="text-white font-medium leading-tight">
               Previous <br />
-              The Ultimate Email Marketing Guide for B...
+              The Ultimate Email Market...
             </p>
           </Link>
         </div>
 
-        <div className="w-full sm:w-80 p-4 mx-0 sm:mx-60">
+        <div className="w-full p-4 mx-0 sm:mx-60">
           <Link
             to="/third"
             className="flex items-center gap-3 bg-sky-800 hover:scale-105 transition p-3 shadow-md"

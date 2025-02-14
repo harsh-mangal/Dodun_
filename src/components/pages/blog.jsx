@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const blog = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
+      duration: 2000, // Animation duration in milliseconds
       once: true, // Whether animation should happen only once
     });
   }, []);

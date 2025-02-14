@@ -7,7 +7,7 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const emailMarketing = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/Homepage-Background-Training-181334_1080x600.jpg?updatedAt=1739346348793"
+  const link="https://ik.imagekit.io/jncw2kb8u/2995663.jpg?updatedAt=1739455428429"
   const pageName= "EMAIL MARKETING"
 
   const services = [

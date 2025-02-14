@@ -2,12 +2,37 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../footer/footer";
 import { useState, useEffect } from "react";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const contactUs = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName:"",
+    email: "",
+    phoneNumber:"",
+    message:""
+  });
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setResponseMessage(""); // Reset response message
+
+    try {
+      const res = await axios.post("http://localhost:3000/submit", formData);
+      setResponseMessage(res.data.success);
+      setFormData({ firstName: "", lastName: "", email: "", phoneNumber: "", message:"" }); // Reset form
+    } catch (error) {
+      setResponseMessage(error.response?.data?.error || "An error occurred!");
+    }
+  };
   const contactInfo = [
     {
       icon: "fa-envelope",
@@ -96,7 +121,7 @@ const contactUs = () => {
               className="w-full"
             />
           </div>
-          <div data-aos="fade-up-left" className="w-full md:w-1/2 p-6">
+          <form onSubmit={handleSubmit} data-aos="fade-up-left" className="w-full md:w-1/2 p-6">
             <div className="flex flex-col md:flex-row md:space-x-4 mt-4">
               <div className="w-full md:w-1/2">
                 <label className="block text-lg font-semibold">
@@ -106,6 +131,10 @@ const contactUs = () => {
                   type="text"
                   placeholder="Enter your first name"
                   className="w-full p-2 border rounded-md mt-2"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
                 />
               </div>
               <div className="w-full md:w-1/2 mt-4 md:mt-0">
@@ -114,6 +143,10 @@ const contactUs = () => {
                   type="text"
                   placeholder="Enter your last name"
                   className="w-full p-2 border rounded-md mt-2"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
                 />
               </div>
             </div>
@@ -123,13 +156,21 @@ const contactUs = () => {
               type="email"
               placeholder="Enter a valid email address"
               className="w-full p-2 border rounded-md mt-2"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
             />
 
-            <label className="block text-lg font-semibold mt-2">Phone no.</label>
+            <label className="block text-lg font-semibold mt-2">Phone Number</label>
             <input
               type="tel"
               placeholder="Enter a valid email address"
               className="w-full p-2 border rounded-md mt-2"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              required
             />
 
             <label className="block text-lg font-semibold mt-4">Message</label>
@@ -137,12 +178,16 @@ const contactUs = () => {
               placeholder="Enter your message"
               className="w-full p-2 border rounded-md mt-2"
               rows="4"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
             ></textarea>
 
-            <button className="w-full mt-4 p-3 bg-yellow-500 text-white rounded-md font-bold transition-all duration-300 hover:bg-yellow-600 hover:scale-105">
+            <button  type="submit" className="w-full mt-4 p-3 bg-yellow-500 text-white rounded-md font-bold transition-all duration-300 hover:bg-yellow-600 hover:scale-105">
               Submit
             </button>
-          </div>
+          </form>
         </div>
       </div>
       <Footer />

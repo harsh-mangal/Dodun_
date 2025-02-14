@@ -8,7 +8,7 @@ import GetTouch from './components/getTouch'
 
 
 const seo = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/Homepage-Background-Training-181334_1080x600.jpg?updatedAt=1739346348793"
+  const link="https://ik.imagekit.io/jncw2kb8u/2112.w039.n003.47B.p1.47.jpg?updatedAt=1739452447754"
   const pageName= "SEO"
 
   const services = [
