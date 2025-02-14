@@ -7,7 +7,7 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const ppc = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/53094.jpg?updatedAt=1739454490813"
+  const link="https://ik.imagekit.io/jncw2kb8u/5179459.jpg?updatedAt=1739529624292"
   const pageName= "PAY PER CLICK"
 
   const services = [

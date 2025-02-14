@@ -7,7 +7,7 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const socialMediaMarketing = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/Homepage-Background-Training-181334_1080x600.jpg?updatedAt=1739346348793"
+  const link="https://ik.imagekit.io/jncw2kb8u/4530890.jpg?updatedAt=1739510807157"
   const pageName= "SOCIAL MEDIA MARKETING"
 
   const services = [

@@ -19,14 +19,14 @@ const blog = () => {
       <div className="relative manrope w-full h-[500px] flex items-center justify-center text-center">
         {/* Background Image */}
         <img
-          src="https://ik.imagekit.io/jncw2kb8u/freepik__upload__47918.jpg?updatedAt=1738397180033"
+          src="https://ik.imagekit.io/jncw2kb8u/2736570.jpg?updatedAt=1739529088924"
           alt="Blog Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
+          className="absolute inset-0 w-full h-full object-fit opacity-50"
         />
         {/* Overlay Content */}
         <h1
           data-aos="fade-right"
-          className="relative text-gray-700 text-4xl md:text-5xl font-bold"
+          className="relative cormorant-garamond-bold text-gray-700 text-4xl md:text-5xl font-bold"
         >
           OUR BLOGS
         </h1>

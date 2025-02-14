@@ -7,7 +7,7 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const videoEditing = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/Homepage-Background-Training-181334_1080x600.jpg?updatedAt=1739346348793"
+  const link="https://ik.imagekit.io/jncw2kb8u/Content%20creator%20editing%20video%20footage%20in%20studio.jpg?updatedAt=1739514972331"
   const pageName= "VIDEO EDITING"
 
   const services = [

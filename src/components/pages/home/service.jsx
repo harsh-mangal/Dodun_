@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 const service = () => {
   const services = [
@@ -34,6 +35,13 @@ const service = () => {
   ];
 
   const [hoverIndex, setHoverIndex] = useState(null);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
+  // const handleClick = (index) => {
+  //   if (isMobile) {
+  //     setHoverIndex(index);
+  //   }
+  // };
 
   useEffect(() => {
       AOS.init({
@@ -56,6 +64,11 @@ const service = () => {
           className="mb-4"
           onMouseEnter={() => setHoverIndex(index)}
           onMouseLeave={() => setHoverIndex(null)}
+          onClick={() => {
+            if (isMobile) {
+                  hoverIndex === null ? setHoverIndex(index) : setHoverIndex(null);
+              }
+          }} 
         >
           <div className="w-full flex justify-between items-end text-gray-600 py-4 px-6 border-b border-gray-300 hover:text-gray-800 transition duration-300 text-left focus:outline-none">
            <div className='flex'>

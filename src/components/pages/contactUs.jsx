@@ -16,6 +16,7 @@ const contactUs = () => {
     message:""
   });
   const [responseMessage, setResponseMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,7 +29,9 @@ const contactUs = () => {
     try {
       const res = await axios.post("http://localhost:3000/submit", formData);
       setResponseMessage(res.data.success);
+      setSuccessMessage("Form submitted successfully!");
       setFormData({ firstName: "", lastName: "", email: "", phoneNumber: "", message:"" }); // Reset form
+      setTimeout(() => setSuccessMessage(""), 3000);
     } catch (error) {
       setResponseMessage(error.response?.data?.error || "An error occurred!");
     }
@@ -187,6 +190,8 @@ const contactUs = () => {
             <button  type="submit" className="w-full mt-4 p-3 bg-yellow-500 text-white rounded-md font-bold transition-all duration-300 hover:bg-yellow-600 hover:scale-105">
               Submit
             </button>
+            {successMessage && <p class="w-full  text-black text-center py-3 font-bold" >{successMessage}</p>}
+
           </form>
         </div>
       </div>

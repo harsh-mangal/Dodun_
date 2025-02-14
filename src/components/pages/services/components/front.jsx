@@ -12,12 +12,12 @@ const front = ({url, text}) => {
     }, []);
   return (
     <>
-   <div className="relative manrope w-full h-[500px] flex items-center justify-center text-center">
+   <div className="relative cormorant-garamond-bold w-full h-[500px] flex items-center justify-center text-center">
         {/* Background Image */}
         <img
           src= {url}
           alt="Blog Background"
-          className="absolute inset-0 w-full h-full object-fit opacity-40"
+          className="absolute inset-0 w-full h-full object-fit opacity-70"
         />
         <div className="absolute bg-white w-full h-full opacity-30 shadow-lg backdrop-blur-lg"></div>
         {/* Overlay Content */}

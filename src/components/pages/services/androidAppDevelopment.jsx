@@ -7,7 +7,7 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const androidAppDevelopment = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/Homepage-Background-Training-181334_1080x600.jpg?updatedAt=1739346348793"
+  const link="https://ik.imagekit.io/jncw2kb8u/appdeveloper_1.jpg?updatedAt=1739515246200"
   const pageName= "ANDROID APP DEVELOPMENT"
 
   const services = [
