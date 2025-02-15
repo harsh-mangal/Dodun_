@@ -116,7 +116,7 @@ const contactUs = () => {
         </div>
 
         {/* Contact Form Section */}
-        <div className="bg-blue-200 p-6 md:p-10 mt-10 md:mx-50 rounded-lg flex flex-col md:flex-row items-center overflow-hidden">
+        <div className="bg-blue-200 md:p-10 mt-10 md:mx-50 rounded-lg flex flex-col md:flex-row items-center overflow-hidden">
           <div data-aos="fade-up-right" className="w-full md:w-1/2">
             <img
               src="https://ik.imagekit.io/jncw2kb8u/blog-listing-hero.svg?updatedAt=1739170233142"

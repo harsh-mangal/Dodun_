@@ -49,14 +49,14 @@ const news = () => {
        <h1 className="text-2xl text-center md:text-left font-bold text-gray-600 mb-4">
           Our Blogs
         </h1>
-        <p className="text-2xl text-center md:text-align text-black max-w-6xl mx-auto my-5 mb-8">
+        <p className="text-2xl text-center md:text-left md:text-align text-black max-w-6xl mx-auto my-5 mb-8">
           Boost your organic traffic and engagement with our campaigns that get
           your business in front of the right people at the right time.
         </p>
        </div>
 
         {/* News Cards Grid */}
-        <div data-aos="fade-down-left" className="w-80 md:ml-0 md:w-180">
+        <div data-aos="fade-down-left" className="w-auto max-w-3xl md:ml-0 md:w-180 overflow-hidden ">
           {newsData.map((news, index) => (
             <div
               key={index}

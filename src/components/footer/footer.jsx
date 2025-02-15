@@ -10,9 +10,9 @@ const footer = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 -px-30 md:px-20">
         <div>
           <img
-            src="https://ik.imagekit.io/jncw2kb8u/LOGO.png?updatedAt=1738224610877"
+            src="https://ik.imagekit.io/jncw2kb8u/image.png?updatedAt=1738665004511"
             alt="Logo"
-            className="h-20 mx-5"
+            className="h-30 w-50"
           />
           <p className="text-gray-600 text-sm mx-5">
             We are more than just an IT services provider. We are a team of dedicated professionals who

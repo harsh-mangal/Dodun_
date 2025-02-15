@@ -13,49 +13,56 @@ const about = () => {
   }, []);
 
   return (
-    <div className="bg-white h-250 py-16  md:h-130 overflow-hidden">
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-3 items-center">
-        {/* About Section */}
-        <div data-aos="fade-up-right">
-          <h2 className="mx-[70px] text-4xl md:text-6xl font-bold text-black">
-            Who We Are!
-          </h2>
-          <div className="visible md:hidden">
+    <div className="bg-white py-16 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* About Section */}
+          <div data-aos="fade-up-right" className="text-center lg:text-left">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black">
+              Who We Are!
+            </h2>
+            <div className="lg:hidden flex justify-center mt-6">
+              <img
+                src="https://ik.imagekit.io/jncw2kb8u/about-us.png?updatedAt=1738752698367"
+                alt="Company Overview"
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto py-5 object-cover"
+              />
+            </div>
+            <p className="text-lg sm:text-xl md:text-2xl font-semibold mt-4 text-black">
+              DODUN Soft Solutions - Empowering Tomorrow's Technology!
+            </p>
+            <p className="text-black md:text-left mt-4 leading-relaxed text-base sm:text-lg md:text-xl">
+              At Dodun Soft Solutions, we’re dedicated to crafting innovative IT
+              solutions that propel businesses forward. From cutting-edge
+              software development to harnessing the power of emerging
+              technologies like AI, we prioritize client-centric solutions
+              tailored to unique business needs. Our team of skilled
+              professionals leverages the latest tools and methodologies to
+              deliver scalable, secure, and high-performance applications.
+              Whether it’s web and mobile development, cloud computing, or data
+              analytics, we ensure seamless integration and optimal efficiency.
+            </p>
+            <div className="mt-6 flex justify-center lg:justify-start">
+              <Link
+                to="/about"
+                className="bg-gradient-to-r from-sky-600 to-blue-800 text-white px-6 py-2 rounded-lg shadow-md hover:scale-110 transition-transform duration-300"
+              >
+                Read More
+              </Link>
+            </div>
+          </div>
+
+          {/* Image Section */}
+          <div
+            data-aos="fade-up-left"
+            className="hidden lg:flex justify-center"
+          >
             <img
               src="https://ik.imagekit.io/jncw2kb8u/about-us.png?updatedAt=1738752698367"
               alt="Company Overview"
-              className="w-auto max-w-[430px] h-auto py-5 object-cover"
+              className="w-[90%] max-w-lg h-auto object-cover shadow-lg"
             />
           </div>
-          <p className="ml-5 md:mx-[70px] text-black text-lg md:text-3xl font-semibold mt-3">
-            DODUN Soft Solutions - Empowering Tomorrow's Technology!
-          </p>
-          <p className="md:mx-[70px] text-black text-left mt-4 leading-relaxed">
-            At Dodun Soft Solutions, we’re dedicated to crafting innovative IT
-            solutions that propel businesses forward. From cutting-edge software
-            development to harnessing the power of emerging technologies like
-            AI, we prioritize client-centric solutions tailored to unique
-            business needs. Our team of skilled professionals leverages the
-            latest tools and methodologies to deliver scalable, secure, and
-            high-performance applications. Whether it’s web and mobile
-            development, cloud computing, or data analytics, we ensure seamless
-            integration and optimal efficiency.
-          </p>
-          <button className="mx-[45px] md:mx-[70px] mt-6 bg-gradient-to-r from-sky-600 to-blue-800 text-white px-6 py-2 rounded-lg shadow-md hover:scale-110 transition delay-200 duration-300 ease-in-out">
-            <Link to="/about">Read More</Link>
-          </button>
-        </div>
-
-        {/* Image Section */}
-        <div
-          data-aos="fade-up-left"
-          className="hidden md:block md:flex justify-center"
-        >
-          <img
-            src="https://ik.imagekit.io/jncw2kb8u/about-us.png?updatedAt=1738752698367"
-            alt="Company Overview"
-            className="w-[600px] h-[400px] object-fit shadow-lg"
-          />
         </div>
       </div>
     </div>
