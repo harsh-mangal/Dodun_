@@ -18,8 +18,8 @@ const footer = () => {
             We are more than just an IT services provider. We are a team of dedicated professionals who
             strive to provide our clients with top-notch solutions and services to help them achieve their business goals.
           </p>
-          <h3 className="mt-4 mx-5 font-bold">Follow Us</h3>
-          <div className="flex space-x-4 mt-2 mx-5">
+          <h3 className="mt-4 mx-6 font-bold">Follow Us</h3>
+          <div className="flex space-x-4 mt-2 mx-6">
             <Link to="#" className="text-blue-500 text-lg"><FaFacebook /></Link>
             <Link to="#" className="text-pink-500 text-lg"><FaInstagram /></Link>
             <Link to="#" className="text-blue-700 text-lg"><FaLinkedin /></Link>

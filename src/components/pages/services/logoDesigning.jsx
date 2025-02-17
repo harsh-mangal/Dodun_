@@ -12,32 +12,32 @@ const logoDesigning = () => {
 
   const services = [
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-1.png?updatedAt=1738570820335",
+      img: "fa-solid fa-magnifying-glass text-[#1D4ED8] text-2xl",
       title: "Custom Logo Design",
       description: "Creates unique, tailored logos that reflect your brand's identity and values. Collaborates closely with clients to ensure the design aligns with their vision. Delivers a logo that stands out in the market and resonates with the target audience."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-2.png?updatedAt=1738571019608",
+      img: "fa-brands fa-dropbox text-[#1D4ED8] text-2xl",
       title: "Logo Redesign",
       description: "Revamps existing logos to modernize the design and improve brand relevance. Focuses on retaining brand recognition while updating aesthetics and functionality. Ensures the new design meets current design trends and consumer expectations."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-3.png?updatedAt=1738571112180",
+      img: "fa-solid fa-feather text-[#1D4ED8] text-2xl",
       title: "Brand Identity Development",
       description: "Develops a comprehensive brand identity package that includes logo, colors, and typography. Ensures consistency across all branding materials and platforms. Helps establish a strong and cohesive visual presence in the market."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-4.png?updatedAt=1738571210732",
+      img: "fa-solid fa-hand-holding-heart text-[#1D4ED8] text-2xl",
       title: "Icon Design",
       description: "Creates custom icons that complement your logo and enhance brand messaging. Focuses on simplicity and clarity to ensure easy recognition and usability. Ideal for digital platforms, apps, and other branding collateral."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-5.png?updatedAt=1738571290218",
+      img: "fa-solid fa-virus text-[#1D4ED8] text-2xl",
       title: "Typography-Based Logo Design",
       description: "Specializes in designing logos that focus on creative typography and lettering. Crafts unique text-based logos that convey the brand’s personality. Enhances readability and memorability through thoughtful design choices."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-6.png?updatedAt=1738571391557",
+      img: "fa-solid fa-server text-[#1D4ED8] text-2xl",
       title: "Logo Animation",
       description: "Develops animated logos that add a dynamic element to your brand identity. Enhances engagement and memorability on digital platforms and videos. Ideal for use in marketing materials, websites, and social media campaigns."
     }
@@ -52,10 +52,10 @@ const logoDesigning = () => {
       Designing Services</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:mx-20">
         {services.map((service, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-2xl p-6 text-center transition-transform transform hover:scale-105">
-            <img src={service.img} alt={service.title} className="w-16 h-16 mx-auto mb-4" />
+          <div key={index} className="bg-[#E2E8F0] shadow-lg rounded-2xl p-6 text-center transition-transform transform hover:scale-105">
+             <div className="w-16 h-16 mx-auto mb-4 bg-white flex items-center justify-center rounded-full shadow"><i className={service.img}></i></div>
             <h2 className="text-xl font-semibold text-gray-700 mb-2">{service.title}</h2>
-            <p className="text-gray-600 text-sm">{service.description}</p>
+            <p className="text-gray-600 text-md">{service.description}</p>
           </div>
         ))}
       </div>

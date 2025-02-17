@@ -12,32 +12,32 @@ const androidAppDevelopment = () => {
 
   const services = [
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-1.png?updatedAt=1738570820335",
+      img: "fa-solid fa-magnifying-glass text-[#1D4ED8] text-2xl",
       title: "Custom Android App Development",
       description: "Develops personalized Android applications tailored to specific business requirements. Focuses on creating feature-rich and user-friendly apps for diverse industries. Utilizes the latest Android technologies for optimal performance and design."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-2.png?updatedAt=1738571019608",
+      img: "fa-brands fa-dropbox text-[#1D4ED8] text-2xl",
       title: "Android App UI/UX Design",
       description: "Designs intuitive and visually engaging user interfaces to enhance user experience. Conducts user research to create seamless interactions and easy navigation. Ensures compliance with Android design guidelines for a consistent look and feel."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-3.png?updatedAt=1738571112180",
+      img: "fa-solid fa-feather text-[#1D4ED8] text-2xl",
       title: "API Integration Services",
       description: "Integrates third-party APIs and services to extend app functionality. Connects the app with backend systems, databases, and other applications. Ensures smooth data flow and interoperability for enhanced user experience."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-4.png?updatedAt=1738571210732",
+      img: "fa-solid fa-hand-holding-heart text-[#1D4ED8] text-2xl",
       title: "Quality Assurance and Testing",
       description: "Implements rigorous testing methodologies to ensure app functionality and reliability. Conducts both manual and automated testing to identify and fix bugs. Ensures the app meets industry standards and provides a seamless user experience."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-5.png?updatedAt=1738571290218",
+      img: "fa-solid fa-virus text-[#1D4ED8] text-2xl",
       title: "App Maintenance and Support",
       description: "Offers ongoing maintenance and updates to keep the app running smoothly. Monitors performance, resolves issues, and implements new features as necessary. Ensures compatibility with the latest Android updates and devices."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-6.png?updatedAt=1738571391557",
+      img: "fa-solid fa-server text-[#1D4ED8] text-2xl",
       title: "App Store Optimization (ASO)",
       description: "Enhances app visibility and discoverability on the Google Play Store. Optimizes app listings with effective titles, descriptions, keywords, and visuals. Analyzes performance data to refine strategies for increased downloads and user engagement."
     }
@@ -52,10 +52,10 @@ const androidAppDevelopment = () => {
       Development Services</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:mx-20">
         {services.map((service, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-2xl p-6 text-center transition-transform transform hover:scale-105">
-            <img src={service.img} alt={service.title} className="w-16 h-16 mx-auto mb-4" />
+          <div key={index} className="bg-[#E2E8F0] shadow-lg rounded-2xl p-6 text-center transition-transform transform hover:scale-105">
+            <div className="w-16 h-16 mx-auto mb-4 bg-white flex items-center justify-center rounded-full shadow"><i className={service.img}></i></div>
             <h2 className="text-xl font-semibold text-gray-700 mb-2">{service.title}</h2>
-            <p className="text-gray-600 text-sm">{service.description}</p>
+            <p className="text-gray-600 text-md">{service.description}</p>
           </div>
         ))}
       </div>

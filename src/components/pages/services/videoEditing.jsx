@@ -12,32 +12,32 @@ const videoEditing = () => {
 
   const services = [
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-1.png?updatedAt=1738570820335",
+      img: "fa-solid fa-magnifying-glass text-[#1D4ED8] text-2xl",
       title: "Basic Video Editing",
       description: "Provides fundamental editing services, including cutting, trimming, and arranging footage. Enhances video flow and pacing to create a cohesive story. Ideal for personal projects, vlogs, and basic promotional videos."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-2.png?updatedAt=1738571019608",
+      img: "fa-brands fa-dropbox text-[#1D4ED8] text-2xl",
       title: "Advanced Video Editing",
       description: "Offers comprehensive editing services, including color grading, audio mixing, and visual effects. Elevates the overall quality and professionalism of the final product. Suitable for corporate videos, commercials, and cinematic projects."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-3.png?updatedAt=1738571112180",
+      img: "fa-solid fa-feather text-[#1D4ED8] text-2xl",
       title: "Motion Graphics & Animation",
       description: "Creates dynamic motion graphics and animations to enhance storytelling. Integrates animated elements into videos for added visual appeal. Perfect for explainer videos, advertisements, and brand promotions."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-4.png?updatedAt=1738571210732",
+      img: "fa-solid fa-hand-holding-heart text-[#1D4ED8] text-2xl",
       title: "Social Media Video Editing",
       description: "Tailors videos specifically for social media platforms with optimal formats and lengths. Focuses on eye-catching visuals and engaging content to boost audience interaction. Ideal for marketing campaigns, promotions, and brand awareness."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-5.png?updatedAt=1738571290218",
+      img: "fa-solid fa-virus text-[#1D4ED8] text-2xl",
       title: "Event Highlight Reels",
       description: "Edits footage from events such as weddings, corporate functions, or parties into captivating highlight reels. Captures the most memorable moments, ensuring a polished and engaging presentation. Provides a keepsake that clients can cherish and share with others."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-6.png?updatedAt=1738571391557",
+      img: "fa-solid fa-server text-[#1D4ED8] text-2xl",
       title: "Video Retouching & Restoration",
       description: "Enhances and restores old or damaged video footage for improved quality. Addresses issues like noise reduction, stabilization, and color correction. Ideal for preserving cherished memories and revitalizing archival content."
     }
@@ -52,10 +52,10 @@ const videoEditing = () => {
       Editing Services</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:mx-20">
         {services.map((service, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-2xl p-6 text-center transition-transform transform hover:scale-105">
-            <img src={service.img} alt={service.title} className="w-16 h-16 mx-auto mb-4" />
+          <div key={index} className="bg-[#E2E8F0] shadow-lg rounded-2xl p-6 text-center transition-transform transform hover:scale-105">
+           <div className="w-16 h-16 mx-auto mb-4 bg-white flex items-center justify-center rounded-full shadow"><i className={service.img}></i></div>
             <h2 className="text-xl font-semibold text-gray-700 mb-2">{service.title}</h2>
-            <p className="text-gray-600 text-sm">{service.description}</p>
+            <p className="text-gray-600 text-md">{service.description}</p>
           </div>
         ))}
       </div>

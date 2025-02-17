@@ -13,9 +13,9 @@ const picture = () => {
   }, []);
   return (
     <>
-      <div className="relative w-full h-150 md:h-[500px] lg:h-200 overflow-hidden">
+      <div className="relative w-full h-100 md:h-175 lg:h-175 overflow-hidden">
         <img
-          src="https://ik.imagekit.io/jncw2kb8u/Event%20(3).jpg?updatedAt=1739520546424"
+          src="https://ik.imagekit.io/jncw2kb8u/Add%20a%20heading%20(4).png?updatedAt=1739787868274"
           class="w-full h-full object-fit"
            data-aos="zoom-out-up"
         />

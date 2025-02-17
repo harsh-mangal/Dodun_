@@ -44,10 +44,10 @@ const client = () => {
       <div className="relative">
         <img
           src="https://ik.imagekit.io/jncw2kb8u/testi-bg.jpg?updatedAt=1739270342783"
-          class="w-500 h-230 object-cover"
+          class="w-500 h-200 object-cover"
         />
 
-        <div className="absolute inset-0 max-w-8xl mx-auto p-6 text-center mt-30 mb-40">
+        <div className="absolute inset-0 max-w-8xl mx-auto p-6 text-center mt-10 mb-40">
           <h3 className="text-black text-3xl font-bold">
             What Our Clients Say
           </h3>
@@ -93,7 +93,7 @@ const client = () => {
                   </p>
 
                   {/* Star Ratings */}
-                  <div className="flex justify-center">
+                  <div className="flex justify-center mt-3">
                     {"★"
                       .repeat(testimonial.rating)
                       .split("")
@@ -105,8 +105,8 @@ const client = () => {
                   </div>
 
                   {/* Name and Role */}
-                  <h3 className=" font-semibold text-lg">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <h3 className=" font-semibold text-lg mt-3">{testimonial.name}</h3>
+                  <p className="text-sm text-gray-500 mt-3">{testimonial.role}</p>
                 </div>
               </SwiperSlide>
             ))}

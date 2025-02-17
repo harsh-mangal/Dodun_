@@ -12,32 +12,32 @@ const emailMarketing = () => {
 
   const services = [
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-1.png?updatedAt=1738570820335",
+      img: "fa-solid fa-magnifying-glass text-[#1D4ED8] text-2xl",
       title: "Email Campaign Management",
       description: "Designs, schedules, and sends email campaigns to segmented lists. Ensures personalized content and timing for maximum engagement. Tracks performance metrics like open rates and click-through rates."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-2.png?updatedAt=1738571019608",
+      img: "fa-brands fa-dropbox text-[#1D4ED8] text-2xl",
       title: "Automated Email Sequences",
       description: "Creates drip campaigns that automatically send emails based on user actions. Nurtures leads with targeted content at each stage of the buyer's journey. Saves time while maintaining consistent communication with subscribers."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-3.png?updatedAt=1738571112180",
+      img: "fa-solid fa-feather text-[#1D4ED8] text-2xl",
       title: "Newsletter Creation",
       description: "Develops visually appealing and informative email newsletters. Keeps your audience updated with industry news, promotions, and company updates. Encourages repeat engagement and builds long-term customer relationships."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-4.png?updatedAt=1738571210732",
+      img: "fa-solid fa-hand-holding-heart text-[#1D4ED8] text-2xl",
       title: "List Segmentation & Management",
       description: "Organizes email lists based on demographics, behavior, and engagement. Targets specific segments with relevant content for higher open rates. Helps personalize campaigns for improved engagement and conversions."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-5.png?updatedAt=1738571290218",
+      img: "fa-solid fa-virus text-[#1D4ED8] text-2xl",
       title: "A/B Testing",
       description: "Tests different email subject lines, content, and designs to optimize performance. Helps determine what resonates best with your audience. Increases email effectiveness through data-driven adjustments."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-6.png?updatedAt=1738571391557",
+      img: "fa-solid fa-server text-[#1D4ED8] text-2xl",
       title: "Email Design & Template Creation",
       description: "Crafts professional, mobile-friendly email templates. Ensures consistent branding and enhances the user experience. Maximizes engagement with visually appealing, easy-to-read emails."
     }
@@ -52,10 +52,10 @@ const emailMarketing = () => {
       Marketing Services</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:mx-20">
         {services.map((service, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-2xl p-6 text-center transition-transform transform hover:scale-105">
-            <img src={service.img} alt={service.title} className="w-16 h-16 mx-auto mb-4" />
+          <div key={index} className="bg-[#E2E8F0] shadow-lg rounded-2xl p-6 text-center transition-transform transform hover:scale-105">
+            <div className="w-16 h-16 mx-auto mb-4 bg-white flex items-center justify-center rounded-full shadow"><i className={service.img}></i></div>
             <h2 className="text-xl font-semibold text-gray-700 mb-2">{service.title}</h2>
-            <p className="text-gray-600 text-sm">{service.description}</p>
+            <p className="text-gray-600 text-md">{service.description}</p>
           </div>
         ))}
       </div>

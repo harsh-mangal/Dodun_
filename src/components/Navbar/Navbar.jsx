@@ -60,7 +60,7 @@ function Navbar() {
   //     }, []);
 
   return (
-    <nav className="relative manrope w-full z-50 bg-white border-b border-gray-300 ">
+    <nav className="relative manrope w-full z-50 bg-white  ">
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link to="/">
           <img
@@ -84,7 +84,7 @@ function Navbar() {
               Services <ChevronDown size={16} />
             </button>
             {isOpen && (
-              <div className="absolute mt-2 bg-white border rounded-lg shadow-lg w-56">
+              <div className="absolute mt-2 bg-white border shadow-lg w-56">
                 {services.map((service, index) => (
                   <div key={index} className="relative">
                     {service.subMenu ? (
@@ -96,7 +96,7 @@ function Navbar() {
                       >
                         {service.title} <ChevronRight size={14} />
                         {openDropdown === index && (
-                          <div className="absolute left-full top-0 mt-0 w-56 bg-white border rounded-lg shadow-lg">
+                          <div className="absolute left-full top-0 mt-0 w-56 bg-white border shadow-lg">
                             {service.subMenu.map((sub, subIndex) => (
                               <Link
                                 key={subIndex}
@@ -129,10 +129,10 @@ function Navbar() {
             Contact Us
           </Link>
         </div>
-        <div className="hidden md:block bg-gradient-to-r from-sky-200 to-blue-500 hover:scale-110 transition duration-300 shadow-lg hover:shadow-3xl">
+        <div className="hidden md:block bg-gradient-to-r from-sky-400 to-blue-800 hover:scale-105 transition duration-300 rounded-lg shadow-lg hover:shadow-xl">
           <button
             type="tel"
-            className="bg-white m-1  p-10  text-black text-lg px-4 py-2  "
+            className="bg-white m-1  p-10  text-black text-md px-4 py-2 rounded-[calc(0.5rem-1px)]"
           >
             +91-8968881110
           </button>
@@ -142,7 +142,7 @@ function Navbar() {
         </button>
       </div>
       {isOpen && (
-        <div className="md:hidden bg-gray-200 p-4 space-y-2 shadow-lg">
+        <div className="md:hidden bg-white p-4 space-y-2 shadow-lg">
           <Link to="/" className="block text-gray-800 hover:text-blue-500">
             Home
           </Link>
@@ -205,7 +205,7 @@ function Navbar() {
           >
             Contact Us
           </Link>
-          <button className="w-full bg-blue-500 text-white px-4 py-2 rounded-lg">
+          <button className="w-full bg-gradient-to-r from-sky-400 to-blue-800 text-white text-md px-4 py-2">
             +91-8968881110
           </button>
         </div>

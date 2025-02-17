@@ -50,7 +50,7 @@ const getTouch = () => {
         <img
           src="https://ik.imagekit.io/jncw2kb8u/getintouch.jpg?updatedAt=1739354646829"
           alt="Blog Background"
-          className="absolute inset-0 w-full h-[1100px] object-cover"
+          className="absolute inset-0 w-full h-[1200px] object-cover"
           style={{
             transform: `translateY(${offsetY}px)`,
             willChange: "transform", // Optimize for performance

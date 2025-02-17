@@ -18,20 +18,20 @@ const about = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* About Section */}
           <div data-aos="fade-up-right" className="text-center lg:text-left">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black">
+            <h2 className="text-4xl font-bold">
               Who We Are!
             </h2>
             <div className="lg:hidden flex justify-center mt-6">
               <img
                 src="https://ik.imagekit.io/jncw2kb8u/about-us.png?updatedAt=1738752698367"
                 alt="Company Overview"
-                className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto py-5 object-cover"
+                className="w-full max-w-xl md:max-w-6xl py-5 object-cover"
               />
             </div>
-            <p className="text-lg sm:text-xl md:text-2xl font-semibold mt-4 text-black">
+            <p className="text-2xl mt-4 text-black">
               DODUN Soft Solutions - Empowering Tomorrow's Technology!
             </p>
-            <p className="text-black md:text-left mt-4 leading-relaxed text-base sm:text-lg md:text-xl">
+            <p className="text-black text-justify md:text-left mt-4 leading-relaxed text-base text-md">
               At Dodun Soft Solutions, we’re dedicated to crafting innovative IT
               solutions that propel businesses forward. From cutting-edge
               software development to harnessing the power of emerging
@@ -60,7 +60,7 @@ const about = () => {
             <img
               src="https://ik.imagekit.io/jncw2kb8u/about-us.png?updatedAt=1738752698367"
               alt="Company Overview"
-              className="w-[90%] max-w-lg h-auto object-cover shadow-lg"
+              className="w-full max-w-2xl h-auto object-cover shadow-lg"
             />
           </div>
         </div>

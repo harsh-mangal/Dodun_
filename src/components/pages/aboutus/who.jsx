@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 const who = () => {
   return (
     <>
-      <div className="manrope relative w-full h-full max-h-400 lg:h-200">
+      <div className="manrope relative w-full lg:h-200">
         {/* Background img */}
         <img
           src="https://ik.imagekit.io/jncw2kb8u/about-bg1.jpg?updatedAt=1739605522781"
-          class="relative w-full h-400  object-cover"
+          class="w-full h-full  object-cover"
         />
-        <div className="hidden lg:block absolute inset-0 mx-70 mt-120">
+        <div className=" absolute inset-0 mx-70 mt-120">
           {/* animated img */}
           <motion.img
             src="https://ik.imagekit.io/jncw2kb8u/about-shape.png?updatedAt=1739278607637"
@@ -19,7 +19,7 @@ const who = () => {
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} // Infinite loop
           />
         </div>
-        <div className="hidden lg:block">
+        <div className="">
           <motion.div // animated img
             animate={{ x: [0, 50, 0] }} // Moves right 50px, then back to start
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} // Infinite loop
@@ -33,7 +33,7 @@ const who = () => {
           </motion.div>
         </div>
         <div className=" absolute inset-0 grid grid-cols-1 md:grid-cols-2 md:px-4 ">
-          <div className="hidden lg:block">
+          <div className="">
             {/* thumb img */}
             <img
               src="https://ik.imagekit.io/jncw2kb8u/about-thumb.png?updatedAt=1739274068162"
@@ -41,7 +41,7 @@ const who = () => {
               className="mt-20 mx-20 relative"
             />
             {/* dilevered projects */}
-            <div className="hidden lg:block mx-70 my-90 bg-blue-600 h-50 w-50 text-white text-center border-4 border-white rounded-full absolute inset-0 flex-col">
+            <div className=" mx-70 my-90 bg-blue-600 h-50 w-50 text-white text-center border-4 border-white rounded-full absolute inset-0 flex flex-col">
               <i class="fa-solid fa-thumbs-up mt-10"></i>
               <p className="text-2xl mt-2">521+</p>
               <p className="text-xl mx-5">Projects Delivered</p>
@@ -64,7 +64,7 @@ const who = () => {
               quality and client satisfaction, sets us apart in the industry.
               Here’s what you can expect from us:
             </p>
-            <section class="mt-4 mx-20">
+            <section class="mt-4 mx-10 md:mx-20">
               <div class="max-w-8xl">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                   <div class="bg-white p-4 shadow-md">

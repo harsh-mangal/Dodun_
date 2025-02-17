@@ -12,32 +12,32 @@ const webDesigning = () => {
 
   const services = [
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-1.png?updatedAt=1738570820335",
+      img: "fa-solid fa-magnifying-glass text-[#1D4ED8] text-2xl",
       title: "Custom Website Design",
       description: "Creates a unique, tailored design to reflect your brand identity. Ensures a user-friendly experience and seamless navigation. Focuses on aesthetics, functionality, and conversion optimization."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-2.png?updatedAt=1738571019608",
+      img: "fa-brands fa-dropbox text-[#1D4ED8] text-2xl",
       title: "Responsive Web Design",
       description: "Develops websites that adapt to various screen sizes (mobile, tablet, desktop). Enhances user experience with optimized layouts for all devices. Improves SEO rankings and ensures accessibility across platforms."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-3.png?updatedAt=1738571112180",
+      img: "fa-solid fa-feather text-[#1D4ED8] text-2xl",
       title: "UI/UX Design",
       description: "Focuses on crafting intuitive user interfaces and exceptional user experiences. Prioritizes functionality, ease of use, and engaging design. Aims to boost user satisfaction and increase conversions."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-4.png?updatedAt=1738571210732",
+      img: "fa-solid fa-hand-holding-heart text-[#1D4ED8] text-2xl",
       title: "eCommerce Website Design",
       description: "Builds online stores with secure payment gateways and easy navigation. Designs product pages to optimize user engagement and conversions. Focuses on mobile-friendliness and seamless checkout processes."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-5.png?updatedAt=1738571290218",
+      img: "fa-solid fa-virus text-[#1D4ED8] text-2xl",
       title: "Landing Page Design",
       description: "Creates high-converting landing pages for campaigns or promotions. Focuses on clear calls-to-action, minimal distractions, and optimized layout. Aims to capture leads or drive specific user actions."
     },
     {
-      img: "https://ik.imagekit.io/jncw2kb8u/business-logo-6.png?updatedAt=1738571391557",
+      img: "fa-solid fa-server text-[#1D4ED8] text-2xl",
       title: "Website Redesign",
       description: "Revamps existing websites with modern designs and improved performance. Updates outdated elements, improving user experience and functionality. Enhances site speed, SEO, and mobile responsiveness for better results."
     }
@@ -52,10 +52,10 @@ const webDesigning = () => {
       Designing Services</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:mx-20">
         {services.map((service, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-2xl p-6 text-center transition-transform transform hover:scale-105">
-            <img src={service.img} alt={service.title} className="w-16 h-16 mx-auto mb-4" />
+          <div key={index} className="bg-[#E2E8F0] shadow-lg rounded-2xl p-6 text-center transition-transform transform hover:scale-105">
+            <div className="w-16 h-16 mx-auto mb-4 bg-white flex items-center justify-center rounded-full shadow"><i className={service.img}></i></div>
             <h2 className="text-xl font-semibold text-gray-700 mb-2">{service.title}</h2>
-            <p className="text-gray-600 text-sm">{service.description}</p>
+            <p className="text-gray-600 text-md">{service.description}</p>
           </div>
         ))}
       </div>
