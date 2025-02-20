@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../Navbar/Navbar'
+import Navbar_second from '../../Navbar/Navbar_second'
 import Footer from '../../footer/footer'
 import Front from './components/front'
 import TechStack from './components/techStack'
@@ -7,8 +7,9 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const animatedVideos = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/3757903.jpg?updatedAt=1739516183667"
+  const link="https://ik.imagekit.io/jncw2kb8u/attractive-male-video-editor-works-with-footage-video-his-personal-computer-having-break-communicating-his-smartphone-he-works-creative-office-studio-home-neon-lights.jpg?updatedAt=1740033687019"
   const pageName= "ANIMATED VIDEOS"
+  const para= "We create captivating animated videos that bring your ideas to life, perfect for marketing, promotions, and storytelling. Enhance your brand’s message with engaging visuals tailored to your audience."
 
   const services = [
     {
@@ -44,8 +45,8 @@ const animatedVideos = () => {
   ];
   return (
     <>
-    <Navbar />
-    <Front url={link} text={pageName} />
+    <Navbar_second />
+    <Front url={link} text={pageName} paragraph={para} />
     {/* cards */}
     <div className="py-10 px-5 text-center">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Our Lineup of Specialized Animated Video Services</h1>

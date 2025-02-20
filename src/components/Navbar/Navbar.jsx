@@ -40,6 +40,8 @@ const services = [
 ];
 
 function Navbar() {
+  //const [Position, setPosition] = useState(false);
+  //const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [is_Open, setIs_Open] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -58,9 +60,22 @@ function Navbar() {
   //         once: true, // Whether animation should happen only once
   //       });
   //     }, []);
+  // useEffect(() => {
+  //     const handleScroll = () => {
+  //       const currentScrollPos = window.scrollY;
+  
+  //       // Set background to white when scrolling up
+  //       setPosition(currentScrollPos > 10);
+  
+  //       setPrevScrollPos(currentScrollPos);
+  //     };
+  
+  //     window.addEventListener("scroll", handleScroll);
+  //     return () => window.removeEventListener("scroll", handleScroll);
+  //   }, []);
 
   return (
-    <nav className="relative manrope w-full z-50 bg-white  ">
+    <nav className="sticky manrope top-0 left-0 w-full z-50 transition-all duration-300 bg-white">
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link to="/">
           <img

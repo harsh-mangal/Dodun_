@@ -6,9 +6,8 @@ import TechStack from './components/techStack'
 import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
-
 const seo = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/nasa-Q1p7bh3SHj8-unsplash.jpg?updatedAt=1739968043215"
+  const link="https://ik.imagekit.io/jncw2kb8u/2150063136.jpg?updatedAt=1740038399331"
   const pageName= "Search Engine Optimization"
   const para= "Our tailored strategies enhance search rankings, ensuring your business reaches the right audience effectively."
 

@@ -19,16 +19,16 @@ const front = ({url, text, paragraph}) => {
           alt="Blog Background"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute bg-black w-full h-full opacity-10 shadow-lg backdrop-blur-lg"></div>
+        <div className="absolute bg-black w-full h-full opacity-50 shadow-lg backdrop-blur-lg"></div>
         {/* Overlay Content */}
         <div className='grid grid-cols-1 '>
         <h1
           data-aos="fade-right"
-          className="relative mulish text-white text-4xl md:text-7xl font-bold"
+          className="relative josefin-sans text-white text-4xl md:text-7xl font-bold"
         >
           {text}
         </h1>
-        <p data-aos="fade-right" className="mulish text-white mt-5 mx-5 text-2xl max-w-5xl overflow-hidden">
+        <p data-aos="fade-right" className="josefin-sans text-white mt-5 mx-5 text-2xl max-w-5xl overflow-hidden">
           {paragraph}
         </p>
         </div>

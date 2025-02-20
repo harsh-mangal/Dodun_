@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import BackToTop from "./BacktoTop";
 
 const contactUs = () => {
   const [formData, setFormData] = useState({
@@ -59,7 +60,7 @@ const contactUs = () => {
     {
       icon: "fa-phone",
       title: "Phone",
-      description: "Mon-Fri from 9am to 6pm \n Sat from 10am to 4pm",
+      description: "Mon-Sat from 10:30am to 7:30pm",
       link: "tel:+91-8968881110",
       linkText: "+91-8968881110",
     },
@@ -74,6 +75,7 @@ const contactUs = () => {
   return (
     <>
       <Navbar />
+      <BackToTop />
       <div className="bg-white manrope p-6 md:p-10">
         {/* Heading section */}
         <div data-aos="fade-down" className="text-center mb-8 md:mb-10">
@@ -87,7 +89,7 @@ const contactUs = () => {
         {/* Contact Info Section */}
         <div
           data-aos="fade-down"
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left p-2 md:mx-45"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left  md:mx-45"
         >
           {contactInfo.map((item, index) => (
             <div
@@ -95,7 +97,7 @@ const contactUs = () => {
               className="p-6 bg-white shadow-md border-4 border-blue-300 transition-transform duration-300 hover:scale-105 hover:shadow-lg mx-auto md:mx-0 w-full max-w-sm"
             >
               <i
-                className={`fa-solid ${item.icon} text-yellow-500 text-3xl`}
+                className={`fa-solid ${item.icon} text-blue-300 text-3xl`}
               ></i>
               <h2 className="text-xl font-semibold mt-3">{item.title}</h2>
               <p className="text-gray-600 whitespace-pre-line">

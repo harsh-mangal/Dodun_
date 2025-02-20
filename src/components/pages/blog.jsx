@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Front from "./Blog/front";
+import BackToTop from "./BacktoTop";
 //import Front_second from "./Blog/front_second";
 // import { useMediaQuery } from "react-responsive";
 
@@ -20,6 +21,7 @@ const blog = () => {
   return (
     <>
       <Navbar />
+      <BackToTop />
       <Front />
       <div className="bg-white py-12 px-4 sm:px-8 overflow-hidden">
         {/* Blog Section */}

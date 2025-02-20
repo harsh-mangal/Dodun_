@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../Navbar/Navbar'
+import Navbar_second from '../../Navbar/Navbar_second'
 import Footer from '../../footer/footer'
 import Front from './components/front'
 import TechStack from './components/techStack'
@@ -7,8 +7,9 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const windowsDevelopment = () => {
-   const link="https://ik.imagekit.io/jncw2kb8u/18941.jpg?updatedAt=1739516368641"
+   const link="https://ik.imagekit.io/jncw2kb8u/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg?updatedAt=1740037085453"
   const pageName= "WINDOWS DEVELOPMENT"
+  const para= "We offer comprehensive Windows development services, creating efficient and user-friendly desktop applications. Our solutions are tailored to meet your business needs with high performance and seamless functionality."
 
   const services = [
     {
@@ -44,8 +45,8 @@ const windowsDevelopment = () => {
   ];
   return (
     <>
-    <Navbar />
-    <Front url={link} text={pageName} />
+    <Navbar_second />
+    <Front url={link} text={pageName} paragraph={para} />
     {/* cards */}
     <div className="py-10 px-5 text-center">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Our Lineup of Windows Development Services</h1>

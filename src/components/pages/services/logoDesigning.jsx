@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../Navbar/Navbar'
+import Navbar_second from '../../Navbar/Navbar_second'
 import Footer from '../../footer/footer'
 import Front from './components/front'
 import TechStack from './components/techStack'
@@ -7,8 +7,9 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const logoDesigning = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/2252796.jpg?updatedAt=1739514261650"
+  const link="https://ik.imagekit.io/jncw2kb8u/young-graphic-designer-working-office.jpg?updatedAt=1740033497745"
   const pageName= "LOGO DESIGNING"
+  const para= "Transform your brand identity with creative and impactful logo designs. Stand out with unique, professional logos tailored to your vision."
 
   const services = [
     {
@@ -44,8 +45,8 @@ const logoDesigning = () => {
   ];
   return (
     <>
-    <Navbar />
-    <Front url={link} text={pageName} />
+    <Navbar_second />
+    <Front url={link} text={pageName} paragraph={para} />
     {/* cards */}
     <div className="py-10 px-5 text-center">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Our Lineup of Logo

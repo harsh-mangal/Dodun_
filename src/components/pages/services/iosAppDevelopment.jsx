@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../Navbar/Navbar'
+import Navbar_second from '../../Navbar/Navbar_second'
 import Footer from '../../footer/footer'
 import Front from './components/front'
 import TechStack from './components/techStack'
@@ -7,8 +7,9 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const iosAppDevelopment = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/3593965.jpg?updatedAt=1739515129439"
+  const link="https://ik.imagekit.io/jncw2kb8u/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg?updatedAt=1740035009998"
   const pageName= "IOS APP DEVELOPMENT"
+  const para= "We offer top-notch iOS app development services, crafting seamless and user-friendly applications tailored to your business needs. Our expert team ensures high performance, intuitive design, and robust functionality for an exceptional user experience."
 
   const services = [
     {
@@ -44,8 +45,8 @@ const iosAppDevelopment = () => {
   ];
   return (
     <>
-    <Navbar />
-    <Front url={link} text={pageName} />
+    <Navbar_second />
+    <Front url={link} text={pageName} paragraph={para} />
     {/* cards */}
     <div className="py-10 px-5 text-center">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Our Lineup of IOS App

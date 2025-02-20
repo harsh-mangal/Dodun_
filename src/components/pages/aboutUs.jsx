@@ -9,6 +9,7 @@ import Cards from "./aboutus/cards";
 import Who from "./aboutus/who";
 import Who_second from "./aboutus/who_second";
 import { useMediaQuery } from "react-responsive";
+import BackToTop from "./BacktoTop";
 
 const aboutUs = () => {
   const isMobile = useMediaQuery({ maxWidth: 1400 });
@@ -21,6 +22,7 @@ const aboutUs = () => {
   return (
     <>
       <Navbar />
+      <BackToTop />
       <Cards />
       {isMobile ? <Who_second></Who_second>: <Who></Who>}
       <Client />

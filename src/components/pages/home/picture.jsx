@@ -15,7 +15,7 @@ const picture = () => {
     <>
       <div className="relative w-full h-100 md:h-175 lg:h-175 overflow-hidden">
         <img
-          src="https://ik.imagekit.io/jncw2kb8u/Add%20a%20heading%20(4).png?updatedAt=1739787868274"
+          src="https://ik.imagekit.io/jncw2kb8u/Add%20a%20heading%20(1).png?updatedAt=1740039798650"
           class="w-full h-full object-fit"
            data-aos="zoom-out-up"
         />

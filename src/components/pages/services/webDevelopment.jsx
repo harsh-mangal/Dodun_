@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../Navbar/Navbar'
+import Navbar_second from '../../Navbar/Navbar_second'
 import Footer from '../../footer/footer'
 import Front from './components/front'
 import TechStack from './components/techStack'
@@ -7,8 +7,9 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const webDevelopment = () => {
- const link="https://ik.imagekit.io/jncw2kb8u/18907.jpg?updatedAt=1739515425609"
+ const link="https://ik.imagekit.io/jncw2kb8u/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg?updatedAt=1740037085453"
   const pageName= "WEB DEVELOPMENT"
+  const para= "We offer professional web development services, crafting responsive and user-friendly websites tailored to your business needs. Our solutions focus on performance, scalability, and a seamless user experience."
 
   
   const services = [
@@ -45,8 +46,8 @@ const webDevelopment = () => {
   ];
   return (
     <>
-    <Navbar />
-    <Front url={link} text={pageName} />
+   <Navbar_second />
+   <Front url={link} text={pageName} paragraph={para} />
     {/* cards */}
     <div className="py-10 px-5 text-center">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Our Lineup of Web Development Services</h1>

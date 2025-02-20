@@ -7,7 +7,7 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const contentMarketing = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/futurism-perspective-digital-nomads-lifestyle.jpg?updatedAt=1739973944006"
+  const link="https://ik.imagekit.io/jncw2kb8u/representation-user-experience-interface-design.jpg?updatedAt=1740030776514"
   const pageName= "CONTENT MARKETING"
   const para= "We offer expert content marketing services to help businesses create engaging, high-quality content that drives traffic and conversions"
 
