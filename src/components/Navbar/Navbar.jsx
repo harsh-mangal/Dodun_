@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -39,12 +37,12 @@ const services = [
   { title: "Animated Videos", link: "/AnimatedVideos" },
 ];
 
-function Navbar() {
-  //const [Position, setPosition] = useState(false);
-  //const [prevScrollPos, setPrevScrollPos] = useState(0);
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [is_Open, setIs_Open] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const dropdownRef = useRef(null);
+  const mobileDropdownRef = useRef(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -54,25 +52,22 @@ function Navbar() {
     setIs_Open(!is_Open);
   };
 
-  // useEffect(() => {
-  //       AOS.init({
-  //         duration: 1000, // Animation duration in milliseconds
-  //         once: true, // Whether animation should happen only once
-  //       });
-  //     }, []);
-  // useEffect(() => {
-  //     const handleScroll = () => {
-  //       const currentScrollPos = window.scrollY;
-  
-  //       // Set background to white when scrolling up
-  //       setPosition(currentScrollPos > 10);
-  
-  //       setPrevScrollPos(currentScrollPos);
-  //     };
-  
-  //     window.addEventListener("scroll", handleScroll);
-  //     return () => window.removeEventListener("scroll", handleScroll);
-  //   }, []);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+        setOpenDropdown(null);
+      }
+      if (mobileDropdownRef.current && !mobileDropdownRef.current.contains(event.target)) {
+        setIs_Open(false);
+        setOpenDropdown(null);
+      }
+    };
+
+    window.addEventListener("click", handleClickOutside);
+    return () => window.removeEventListener("click", handleClickOutside);
+  }, []);
+
 
   return (
     <nav className="sticky manrope top-0 left-0 w-full z-50 transition-all duration-300 bg-white">

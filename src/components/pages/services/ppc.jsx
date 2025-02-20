@@ -5,6 +5,7 @@ import Front from './components/front'
 import TechStack from './components/techStack'
 import Client from '../home/client'
 import GetTouch from './components/getTouch'
+import BackToTop from '../BacktoTop'
 
 const ppc = () => {
   const link="https://ik.imagekit.io/jncw2kb8u/rodion-kutsaiev-0VGG7cqTwCo-unsplash.jpg?updatedAt=1739970609999"
@@ -47,6 +48,7 @@ const ppc = () => {
   return (
     <>
      <Navbar_second />
+     <BackToTop />
     <Front url={link} text={pageName} paragraph={para} />
     {/* cards */}
     <div className="py-10 px-5 text-center">

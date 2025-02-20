@@ -5,6 +5,7 @@ import Front from './components/front'
 import TechStack from './components/techStack'
 import Client from '../home/client'
 import GetTouch from './components/getTouch'
+import BackToTop from '../BacktoTop'
 
 const iosAppDevelopment = () => {
   const link="https://ik.imagekit.io/jncw2kb8u/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg?updatedAt=1740035009998"
@@ -46,6 +47,7 @@ const iosAppDevelopment = () => {
   return (
     <>
     <Navbar_second />
+    <BackToTop />
     <Front url={link} text={pageName} paragraph={para} />
     {/* cards */}
     <div className="py-10 px-5 text-center">

@@ -5,6 +5,7 @@ import Front from './components/front'
 import TechStack from './components/techStack'
 import Client from '../home/client'
 import GetTouch from './components/getTouch'
+import BackToTop from '../BacktoTop'
 
 const webDesigning = () => {
   const link="https://ik.imagekit.io/jncw2kb8u/programming-background-collage.jpg?updatedAt=1740032598376"
@@ -46,6 +47,7 @@ const webDesigning = () => {
   return (
     <>
     <Navbar_second />
+    <BackToTop />
     <Front url={link} text={pageName} paragraph={para} />
     {/* cards */}
     <div className="py-10 px-5 text-center">

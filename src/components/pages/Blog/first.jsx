@@ -3,11 +3,13 @@ import Navbar from "../../Navbar/Navbar";
 import Footer from "../../footer/footer";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import BackToTop from "../BacktoTop";
 
 const first = () => {
   return (
     <>
       <Navbar />
+      <BackToTop />
       <div className="manrope max-w-5xl mx-auto p-4 sm:p-8">
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 text-center sm:text-left">

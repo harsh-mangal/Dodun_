@@ -1,4 +1,5 @@
 import "./App.css";
+import ScrollToTopOnRouteChange from "./components/pages/ScrollToTopOnRouteChange";
 import Home from "./components/pages/home";
 import AboutUs from "./components/pages/aboutUs";
 import Blog from "./components/pages/blog";
@@ -22,12 +23,16 @@ import WebDevelopment from "./components/pages/services/webDevelopment";
 import WindowsDevelopment from "./components/pages/services/windowsDevelopment";
 import Hosting from "./components/pages/services/hosting";
 import AnimatedVideos from "./components/pages/services/animatedVideos";
+import DigitalMarketing from "./components/pages/services/DigitalMarketing";
+import Designing from "./components/pages/services/Designing";
+import Development from "./components/pages/services/Development";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 
 function App() {
   return (
     <>
      <Router>
+     <ScrollToTopOnRouteChange />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
@@ -52,6 +57,10 @@ function App() {
         <Route path="/WindowsDevelopment" element={<WindowsDevelopment />} />
         <Route path="/Hosting" element={<Hosting />} />
         <Route path="/AnimatedVideos" element={<AnimatedVideos />} />
+        <Route path="/DigitalMarketing" element={<DigitalMarketing />} />
+        <Route path="/Designing" element={<Designing />} />
+        <Route path="/Development" element={<Development />} />
+
       </Routes>
     </Router>
     </>

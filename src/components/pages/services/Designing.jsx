@@ -7,42 +7,37 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 import BackToTop from '../BacktoTop'
 
-const seo = () => {
+const Designing = () => {
   const link="https://ik.imagekit.io/jncw2kb8u/2150063136.jpg?updatedAt=1740038399331"
-  const pageName= "Search Engine Optimization"
-  const para= "Our tailored strategies enhance search rankings, ensuring your business reaches the right audience effectively."
+  const pageName= "Designing"
+  const para= "We offer creative and customized design solutions that bring your ideas to life. Our designs focus on aesthetics, functionality, and user engagement to help your brand stand out."
 
   const services = [
     {
       img: "fa-solid fa-magnifying-glass text-[#1D4ED8] text-2xl",
-      title: "Keyword Research",
-      description: "Identifying high-traffic, relevant keywords for your niche. Helps optimize content for search engines and target audience. Ensures competitive advantage with well-researched terms."
+      title: "Web Designing",
+      description: "Customer-focused web portals with all the necessary functionalities to help expand your business digitally."
     },
     {
       img: "fa-brands fa-dropbox text-[#1D4ED8] text-2xl",
-      title: "On-Page Optimization",
-      description: "Enhances website elements like meta tags, headers, and images. Improves site structure, internal linking, and keyword placement. Boosts search engine rankings and overall user experience."
+      title: "UI/UX Designing",
+      description: "Fully-customized websites to speed up business processes, improve productivity, & multiply revenue."
     },
     {
       img: "fa-solid fa-feather text-[#1D4ED8] text-2xl",
-      title: "Technical SEO",
-      description: "Focuses on improving website performance and crawlability. Optimizes page speed, mobile-friendliness, and sitemap configuration. Ensures search engines can efficiently index your site."
+      title: "Graphic Designing",
+      description: "E-commerce solutions to simplify online shopping, increase revenue & attract a larger customer base."
     },
     {
       img: "fa-solid fa-hand-holding-heart text-[#1D4ED8] text-2xl",
-      title: "Content Creation & Optimization",
-      description: "Develops high-quality, SEO-friendly content for your website. Incorporates relevant keywords and addresses user intent. Strengthens authority, engagement, and search visibility."
+      title: "Logo Designing",
+      description: "Easy-to-use CMS web applications to manage your digital content efficiently & gain competitive advantage."
     },
     {
       img: "fa-solid fa-virus text-[#1D4ED8] text-2xl",
-      title: "Link Building",
-      description: "Acquires quality backlinks from reputable websites. Enhances site authority and improves search engine ranking. Builds trust and drives referral traffic to your site."
+      title: "Video Editing",
+      description: "Highly functional ERP web solution for better team collaborations, improved user engagement, & transparent results"
     },
-    {
-      img: "fa-solid fa-server text-[#1D4ED8] text-2xl",
-      title: "Local SEO",
-      description: "Optimizes your site for local search queries and Google My Business. Focuses on location-based keywords and online reviews. Helps your business appear in local map results and directories."
-    }
   ];
 
   return (
@@ -71,4 +66,4 @@ const seo = () => {
   )
 }
 
-export default seo
+export default Designing

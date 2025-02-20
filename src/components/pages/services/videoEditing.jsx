@@ -5,6 +5,7 @@ import Front from './components/front'
 import TechStack from './components/techStack'
 import Client from '../home/client'
 import GetTouch from './components/getTouch'
+import BackToTop from '../BacktoTop'
 
 const videoEditing = () => {
   const link="https://ik.imagekit.io/jncw2kb8u/attractive-male-video-editor-works-with-footage-video-his-personal-computer-having-break-communicating-his-smartphone-he-works-creative-office-studio-home-neon-lights.jpg?updatedAt=1740033687019"
@@ -46,6 +47,7 @@ const videoEditing = () => {
   return (
     <>
     <Navbar_second />
+    <BackToTop />
     <Front url={link} text={pageName} paragraph={para} />
     {/* cards */}
     <div className="py-10 px-5 text-center">
