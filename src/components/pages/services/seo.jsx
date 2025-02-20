@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../Navbar/Navbar'
+import Navbar_second from '../../Navbar/Navbar_second'
 import Footer from '../../footer/footer'
 import Front from './components/front'
 import TechStack from './components/techStack'
@@ -8,8 +8,9 @@ import GetTouch from './components/getTouch'
 
 
 const seo = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/2112.w039.n003.47B.p1.47.jpg?updatedAt=1739452447754"
-  const pageName= "SEO"
+  const link="https://ik.imagekit.io/jncw2kb8u/nasa-Q1p7bh3SHj8-unsplash.jpg?updatedAt=1739968043215"
+  const pageName= "Search Engine Optimization"
+  const para= "Our tailored strategies enhance search rankings, ensuring your business reaches the right audience effectively."
 
   const services = [
     {
@@ -46,8 +47,8 @@ const seo = () => {
 
   return (
     <>
-    <Navbar />
-    <Front url={link} text={pageName} />
+    <Navbar_second />
+    <Front url={link} text={pageName} paragraph={para} />
     {/* cards */}
     <div className="py-10 px-5 text-center">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Our Lineup of SEO Services</h1>

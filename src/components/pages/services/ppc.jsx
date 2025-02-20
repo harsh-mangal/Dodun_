@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../Navbar/Navbar'
+import Navbar_second from '../../Navbar/Navbar_second'
 import Footer from '../../footer/footer'
 import Front from './components/front'
 import TechStack from './components/techStack'
@@ -7,8 +7,9 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const ppc = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/5179459.jpg?updatedAt=1739529624292"
+  const link="https://ik.imagekit.io/jncw2kb8u/rodion-kutsaiev-0VGG7cqTwCo-unsplash.jpg?updatedAt=1739970609999"
   const pageName= "PAY PER CLICK"
+  const para= "Dodun Soft Solution offers expert Pay-Per-Click (PPC) services to maximize your online visibility. Get targeted traffic and higher conversions with our strategic ad campaigns."
 
   const services = [
     {
@@ -45,8 +46,8 @@ const ppc = () => {
 
   return (
     <>
-     <Navbar />
-    <Front url={link} text={pageName} />
+     <Navbar_second />
+    <Front url={link} text={pageName} paragraph={para} />
     {/* cards */}
     <div className="py-10 px-5 text-center">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Our Lineup of Pay Per Clicks Services</h1>

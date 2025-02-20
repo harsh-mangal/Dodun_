@@ -5,34 +5,22 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Front from "./Blog/front";
+//import Front_second from "./Blog/front_second";
+// import { useMediaQuery } from "react-responsive";
 
 const blog = () => {
+  //const isMobile = useMediaQuery({ maxWidth: 1400 });
   useEffect(() => {
     AOS.init({
-      duration: 3000, // Animation duration in milliseconds
+      duration: 2000, // Animation duration in milliseconds
       once: true, // Whether animation should happen only once
     });
   }, []);
   return (
     <>
       <Navbar />
-      <div className="relative manrope w-full h-100 md:h-[500px] flex items-center justify-center text-center overflow-hidden">
-        {/* Background Image */}
-        {/* <img
-          src=""
-          alt="Blog Background"
-          className="absolute inset-0 w-full h-full object-fit overflow-hidden"
-         data-aos="fade-up"
-        /> */}
-        {/* Overlay Content */}
-        <h1
-          data-aos="fade-right"
-          className="relative cormorant-garamond-bold text-black mb-10 md:mb-0 text-4xl md:text-5xl font-bold overflow-hidden"
-        >
-          OUR BLOGS
-        </h1>
-      </div>
-
+      <Front />
       <div className="bg-white py-12 px-4 sm:px-8 overflow-hidden">
         {/* Blog Section */}
         <div

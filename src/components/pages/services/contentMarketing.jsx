@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../Navbar/Navbar'
+import Navbar_second from '../../Navbar/Navbar_second'
 import Footer from '../../footer/footer'
 import Front from './components/front'
 import TechStack from './components/techStack'
@@ -7,8 +7,9 @@ import Client from '../home/client'
 import GetTouch from './components/getTouch'
 
 const contentMarketing = () => {
-  const link="https://ik.imagekit.io/jncw2kb8u/3331363.jpg?updatedAt=1739454880226"
+  const link="https://ik.imagekit.io/jncw2kb8u/futurism-perspective-digital-nomads-lifestyle.jpg?updatedAt=1739973944006"
   const pageName= "CONTENT MARKETING"
+  const para= "We offer expert content marketing services to help businesses create engaging, high-quality content that drives traffic and conversions"
 
   const services = [
     {
@@ -44,8 +45,8 @@ const contentMarketing = () => {
   ];
   return (
     <>
-    <Navbar />
-    <Front url={link} text={pageName} />
+    <Navbar_second />
+    <Front url={link} text={pageName} paragraph={para}/>
     {/* cards */}
     <div className="py-10 px-5 text-center">
       <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Our Lineup of Content Marketing Services</h1>

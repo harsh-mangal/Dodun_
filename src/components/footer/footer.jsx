@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const footer = () => {
   return (
     <footer className="manrope bg-white py-10 relative overflow-hidden">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 -px-30 md:px-20">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         <div>
           <img
             src="https://ik.imagekit.io/jncw2kb8u/image.png?updatedAt=1738665004511"
@@ -48,7 +48,7 @@ const footer = () => {
           </ul>
         </div>
         </div>
-        <div className='mt-10 mx-5'>
+        <div className='mt-10 mx-5 md:mx-0'>
           <h3 className="font-bold">Contact Us</h3>
           <p className="text-gray-600 mt-2">
             <strong>Address:</strong> GM Plaza, Phase -7 Industrial Sector-73, Mohali, India

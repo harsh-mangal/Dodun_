@@ -113,7 +113,7 @@ const contactUs = () => {
         {/* Map Section */}
         <div className="mt-10 px-4 flex justify-center">
           <iframe
-            className="w-full md:w-3/4 h-64 md:h-96 border rounded-lg"
+            className="w-full md:w-3/4 h-64 md:h-96 border"
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d714.3050127920549!2d76.69969712989423!3d30.713347056154703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1739168399841!5m2!1sen!2sin"
             allowFullScreen
             loading="lazy"
