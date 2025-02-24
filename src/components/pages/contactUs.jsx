@@ -17,7 +17,7 @@ const contactUs = () => {
     message: "",
   });
   const [responseMessage, setResponseMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,10 +27,21 @@ const contactUs = () => {
     e.preventDefault();
     setResponseMessage(""); // Reset response message
 
+    // ✅ Phone number validation (10 digits)
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(formData.phoneNumber)) {
+      setResponseMessage("Phone number must be exactly 10 digits!");
+      return;
+    }
+
     try {
       const res = await axios.post("http://localhost:3000/submit", formData);
-      setResponseMessage(res.data.success);
-      setSuccessMessage("Form submitted successfully!");
+      if (res.data.error && res.data.error === "Email already exists") {
+        setResponseMessage("Email already exists. Please use a different email.");
+        return;
+    }
+      
+      setShowPopup(true);
       setFormData({
         firstName: "",
         lastName: "",
@@ -38,7 +49,7 @@ const contactUs = () => {
         phoneNumber: "",
         message: "",
       }); // Reset form
-      setTimeout(() => setSuccessMessage(""), 3000);
+      // setTimeout(() => setResponseMessage(""),3000)
     } catch (error) {
       setResponseMessage(error.response?.data?.error || "An error occurred!");
     }
@@ -65,6 +76,10 @@ const contactUs = () => {
       linkText: "+91-8968881110",
     },
   ];
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
 
   useEffect(() => {
     AOS.init({
@@ -96,9 +111,7 @@ const contactUs = () => {
               key={index}
               className="p-6 bg-white shadow-md border-4 border-blue-300 transition-transform duration-300 hover:scale-105 hover:shadow-lg mx-auto md:mx-0 w-full max-w-sm"
             >
-              <i
-                className={`fa-solid ${item.icon} text-blue-300 text-3xl`}
-              ></i>
+              <i className={`fa-solid ${item.icon} text-blue-300 text-3xl`}></i>
               <h2 className="text-xl font-semibold mt-3">{item.title}</h2>
               <p className="text-gray-600 whitespace-pre-line">
                 {item.description}
@@ -196,6 +209,8 @@ const contactUs = () => {
               value={formData.phoneNumber}
               onChange={handleChange}
               required
+              pattern="\d{10}"
+              title="Phone number must be exactly 10 digits"
             />
 
             <label className="block text-lg font-semibold text-gray-700 mt-4">
@@ -213,17 +228,32 @@ const contactUs = () => {
 
             <button
               type="submit"
-              className="w-full mt-6 p-3 bg-yellow-500 text-white rounded-md font-bold transition-all duration-300 hover:bg-yellow-600 hover:scale-105 shadow-md"
+              className="w-full mt-6 p-3 bg-yellow-500 text-white rounded-md font-bold transition-all duration-300 hover:bg-yellow-600 shadow-md"
             >
               Submit
             </button>
-
-            {successMessage && (
-              <p className="w-full text-black text-center py-3 font-bold">
-                {successMessage}
-              </p>
+            {responseMessage && (
+                <p className={`mt-4 text-center ${responseMessage.includes("success") ? "text-green-600" : "text-red-600"}`}>
+                    {responseMessage}
+                </p>
             )}
+
           </form>
+          {showPopup && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+              <div className="bg-white p-6 rounded-lg text-center shadow-lg">
+                <h3 className="text-lg font-semibold mb-4">
+                  Form Submitted Successfully!
+                </h3>
+                <button
+                  onClick={closePopup}
+                  className="mt-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-200"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <Footer />

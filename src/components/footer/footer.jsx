@@ -12,7 +12,7 @@ const footer = () => {
           <img
             src="https://ik.imagekit.io/jncw2kb8u/image.png?updatedAt=1738665004511"
             alt="Logo"
-            className="h-30 w-50"
+            className="h-30 w-50 md:w-70 object-cover"
           />
           <p className="text-gray-600 text-sm mx-5">
             We are more than just an IT services provider. We are a team of dedicated professionals who
@@ -31,7 +31,7 @@ const footer = () => {
           <ul className="text-gray-600 mt-2 space-y-1">
             <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
             <li><Link to="/about" className="hover:text-blue-500">About Us</Link></li>
-            <li><Link to="/services" className="hover:text-blue-500">Service</Link></li>
+            {/* <li><Link to="/services" className="hover:text-blue-500">Service</Link></li> */}
             <li><Link to="/blog" className="hover:text-blue-500">Blog</Link></li>
             <li><Link to="/contact" className="hover:text-blue-500">Contact Us</Link></li>
           </ul>

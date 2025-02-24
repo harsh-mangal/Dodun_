@@ -60,7 +60,6 @@ function App() {
         <Route path="/DigitalMarketing" element={<DigitalMarketing />} />
         <Route path="/Designing" element={<Designing />} />
         <Route path="/Development" element={<Development />} />
-
       </Routes>
     </Router>
     </>

@@ -7,12 +7,12 @@ import axios from "axios";
 const touch = () => {
   const [formData, setFormData] = useState({
     firstName: "",
-    lastName:"",
+    lastName: "",
     email: "",
-    phoneNumber:""
+    phoneNumber: "",
   });
   const [responseMessage, setResponseMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,15 +22,30 @@ const touch = () => {
     e.preventDefault();
     setResponseMessage(""); // Reset response message
 
+    // ✅ Phone number validation (10 digits)
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(formData.phoneNumber)) {
+      setResponseMessage("Phone number must be exactly 10 digits!");
+      return;
+    }
+
     try {
       const res = await axios.post("http://localhost:3000/submit", formData);
-      setResponseMessage(res.data.success);
-      setSuccessMessage("Form submitted successfully!");
+      if (res.data.error && res.data.error === "Email already exists") {
+        setResponseMessage(
+          "Email already exists. Please use a different email."
+        );
+        return;
+      }
+      setShowPopup(true);
       setFormData({ firstName: "", lastName: "", email: "", phoneNumber: "" }); // Reset form
-      setTimeout(() => setSuccessMessage(""), 3000);
     } catch (error) {
       setResponseMessage(error.response?.data?.error || "An error occurred!");
     }
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
 
   useEffect(() => {
@@ -101,20 +116,50 @@ const touch = () => {
             <label class="block text-gray-300 mb-1">Phone Number</label>
             <input
               type="tel"
-              placeholder="Enter Your Phone Number"
+              placeholder="Enter Your 10 digit Phone Number"
               class="w-full px-4 py-3 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
               name="phoneNumber"
               value={formData.phoneNumber}
               onChange={handleChange}
               required
+              pattern="\d{10}"
+              title="Phone number must be exactly 10 digits"
             />
           </div>
 
           {/* <!-- Submit Button --> */}
-          <button type="submit" class="w-full bg-sky-500 hover:bg-sky-800 text-white py-3 rounded-md font-medium transition-all duration-300">
+          <button
+            type="submit"
+            class="w-full bg-sky-500 hover:bg-sky-800 text-white py-3 rounded-md font-medium transition-all duration-300"
+          >
             Submit
           </button>
-          {successMessage && <p class="w-full  text-white text-center py-3 font-bold" >{successMessage}</p>}
+          {responseMessage && (
+            <p
+              className={`mt-4 text-center ${
+                responseMessage.includes("success")
+                  ? "text-green-600"
+                  : "text-red-600"
+              }`}
+            >
+              {responseMessage}
+            </p>
+          )}
+          {showPopup && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+              <div className="bg-black p-6 rounded-lg text-center shadow-lg">
+                <h3 className="text-lg font-semibold mb-4">
+                  Form Submitted Successfully!
+                </h3>
+                <button
+                  onClick={closePopup}
+                  className="mt-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-200"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
         </form>
       </div>
     </div>
