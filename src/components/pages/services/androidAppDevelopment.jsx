@@ -10,7 +10,7 @@ import BackToTop from '../BacktoTop'
 const androidAppDevelopment = () => {
   const link="https://ik.imagekit.io/jncw2kb8u/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg?updatedAt=1740035009998"
   const pageName= "ANDROID APP DEVELOPMENT"
-  const para= "We offer expert Android app development services, crafting intuitive and high-performance mobile solutions tailored to your business needs. Turn your ideas into feature-rich, user-friendly apps that drive engagement and growth."
+  const para= "We offer expert Android app development services, crafting intuitive and high-performance mobile solutions tailored to your business needs."
 
   const services = [
     {

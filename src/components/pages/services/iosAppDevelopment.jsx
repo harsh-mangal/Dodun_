@@ -10,7 +10,7 @@ import BackToTop from '../BacktoTop'
 const iosAppDevelopment = () => {
   const link="https://ik.imagekit.io/jncw2kb8u/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg?updatedAt=1740035009998"
   const pageName= "IOS APP DEVELOPMENT"
-  const para= "We offer top-notch iOS app development services, crafting seamless and user-friendly applications tailored to your business needs. Our expert team ensures high performance, intuitive design, and robust functionality for an exceptional user experience."
+  const para= "We offer top-notch iOS app development services, crafting seamless and user-friendly applications tailored to your business needs."
 
   const services = [
     {

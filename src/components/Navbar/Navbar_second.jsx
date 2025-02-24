@@ -1,8 +1,6 @@
-import React from "react";
-import { Menu, X } from "lucide-react";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import React, { useState, useEffect, useRef } from "react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 const services = [
   {
@@ -41,38 +39,52 @@ const services = [
 const Navbar_second = () => {
   const [bgWhite, setBgWhite] = useState(false);
   const [textWhite, settextWhite] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-  const [is_Open, setIs_Open] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  const toggle_Dropdown = () => {
-    setIs_Open(!is_Open);
-  };
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-
-      // Set background to white when scrolling up
       setBgWhite(currentScrollPos > 10);
-      settextWhite(currentScrollPos >10);
+      settextWhite(currentScrollPos > 10);
+    };
 
-      setPrevScrollPos(currentScrollPos);
+    const handleClickOutside = (event) => {
+      // if (window.innerWidth >= 768) {
+        // Only for desktop
+        if (
+          dropdownRef.current &&
+          !dropdownRef.current.contains(event.target)
+        ) {
+          setIsOpen(false);
+          setOpenDropdown(null);
+        // }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("click", handleClickOutside)
+    };
   }, []);
 
   return (
-    <nav  className={`manrope fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      bgWhite ? "bg-white" : "bg-transparent"
-    }`}>
+    <nav
+      className={`manrope fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        bgWhite ? "bg-white" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link to="/">
           <img
@@ -82,15 +94,30 @@ const Navbar_second = () => {
           />
         </Link>
         <div className="hidden md:flex space-x-6">
-          <Link to="/" className={`${textWhite ? "text-balck" : "text-white"} hover:text-blue-500`}>
+          <Link
+            to="/"
+            className={`${
+              textWhite ? "text-black" : "text-white"
+            } hover:text-blue-500`}
+          >
             Home
           </Link>
-          <Link to="/about" className={`${textWhite ? "text-balck" : "text-white"} hover:text-blue-500`}>
+          <Link
+            to="/about"
+            className={`${
+              textWhite ? "text-black" : "text-white"
+            } hover:text-blue-500`}
+          >
             About Us
           </Link>
-          <div className="relative inline-block text-left hover:cursor-pointer">
+          <div
+            className="relative inline-block text-left hover:cursor-pointer"
+            ref={dropdownRef}
+          >
             <button
-              className={`${textWhite ? "text-balck" : "text-white"} rounded-lg flex items-center gap-2 hover:text-blue-500`}
+              className={`${
+                textWhite ? "text-black" : "text-white"
+              } rounded-lg flex items-center gap-2 hover:text-blue-500`}
               onClick={toggleDropdown}
             >
               Services <ChevronDown size={16} />
@@ -134,27 +161,45 @@ const Navbar_second = () => {
               </div>
             )}
           </div>
-          <Link to="/blog" className={`${textWhite ? "text-balck" : "text-white"} hover:text-blue-500`}>
+          <Link
+            to="/blog"
+            className={`${
+              textWhite ? "text-black" : "text-white"
+            } hover:text-blue-500`}
+          >
             Blog
           </Link>
-          <Link to="/contact" className={`${textWhite ? "text-balck" : "text-white"} hover:text-blue-500`}>
+          <Link
+            to="/contact"
+            className={`${
+              textWhite ? "text-black" : "text-white"
+            } hover:text-blue-500`}
+          >
             Contact Us
           </Link>
         </div>
-        <div className="hidden md:block ">
+        <div className="hidden md:block">
           <button
             type="tel"
-            className={`${textWhite ? "text-balck" : "text-white"} border-2 border-white m-1  p-10 text-md px-4 py-2 hover:scale-105 transition duration-300 rounded-lg shadow-lg hover:shadow-xl`}
+            className={`${
+              textWhite ? "text-black" : "text-white"
+            } border-2 border-white m-1 p-10 text-md px-4 py-2 hover:scale-105 transition duration-300 rounded-lg shadow-lg hover:shadow-xl`}
           >
-            +91-8968881110
+            <Link to="tel:+91-8968881110">+91-8968881110</Link>
           </button>
         </div>
-        <button className={`${textWhite ? "text-balck" : "text-white"} md:hidden`} onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        <button
+          className={`${textWhite ? "text-black" : "text-white"} md:hidden`}
+          onClick={toggleMobileMenu}
+        >
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
-      {isOpen && (
-        <div className="md:hidden bg-white p-4 space-y-2 shadow-lg">
+      {isMobileMenuOpen && (
+        <div
+          ref={dropdownRef}
+          className="md:hidden bg-white p-4 space-y-2 shadow-lg"
+        >
           <Link to="/" className="block text-gray-800 hover:text-blue-500">
             Home
           </Link>
@@ -164,11 +209,11 @@ const Navbar_second = () => {
           <div className="relative inline-block text-left hover:cursor-pointer">
             <button
               className="text-black rounded-lg flex items-center gap-2 hover:text-blue-500 focus:outline-none"
-              onClick={toggle_Dropdown}
+              onClick={toggleDropdown}
             >
               Services <ChevronDown size={16} />
             </button>
-            {is_Open && (
+            {isOpen && (
               <div className="absolute mt-2 bg-white border rounded-lg shadow-lg w-40 z-50">
                 {services.map((service, index) => (
                   <div key={index} className="relative">
@@ -207,7 +252,6 @@ const Navbar_second = () => {
               </div>
             )}
           </div>
-
           <Link to="/blog" className="block text-gray-800 hover:text-blue-500">
             Blog
           </Link>
@@ -218,7 +262,7 @@ const Navbar_second = () => {
             Contact Us
           </Link>
           <button className="w-full bg-gradient-to-r from-sky-400 to-blue-800 text-white text-md px-4 py-2">
-            +91-8968881110
+            <Link to="tel:+91-8968881110">+91-8968881110</Link>
           </button>
         </div>
       )}
