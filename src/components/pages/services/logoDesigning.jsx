@@ -65,7 +65,7 @@ const logoDesigning = () => {
     </div>
     <TechStack />
     <GetTouch />
-    <Client />
+    {/* <Client /> */}
     <Footer />
     </>
   )

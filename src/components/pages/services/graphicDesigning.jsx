@@ -65,7 +65,7 @@ const graphicDesigning = () => {
     </div>
     <TechStack />
     <GetTouch />
-    <Client />
+    {/* <Client /> */}
     <Footer />
     </>
   )

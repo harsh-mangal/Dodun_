@@ -60,7 +60,7 @@ const DigitalMarketing = () => {
     </div>
     <TechStack />
     <GetTouch />
-    <Client />
+    {/* <Client /> */}
     <Footer />
     </>
   )

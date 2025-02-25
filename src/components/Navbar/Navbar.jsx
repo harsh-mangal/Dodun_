@@ -65,7 +65,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky manrope top-0 left-0 w-full z-50 transition-all duration-300 bg-white">
-      <div className="container mx-auto flex items-center justify-between px-4">
+      <div className="container mx-auto md:text-sm lg:text-lg flex items-center justify-between px-4">
         <Link to="/">
           <img
             src="https://ik.imagekit.io/jncw2kb8u/image.png?updatedAt=1738665004511"
@@ -91,7 +91,7 @@ const Navbar = () => {
               Services <ChevronDown size={16} />
             </button>
             {isOpen && (
-              <div className="absolute mt-2 bg-white border shadow-lg w-56">
+              <div className="absolute mt-2 bg-white border shadow-lg w-45">
                 {services.map((service, index) => (
                   <div key={index} className="relative">
                     {service.subMenu ? (
@@ -103,7 +103,7 @@ const Navbar = () => {
                       >
                         {service.title} <ChevronRight size={14} />
                         {openDropdown === index && (
-                          <div className="absolute left-full top-0 mt-0 w-56 bg-white border shadow-lg">
+                          <div className="absolute left-full top-0 mt-0 w-45 bg-white border shadow-lg">
                             {service.subMenu.map((sub, subIndex) => (
                               <Link
                                 key={subIndex}
@@ -150,7 +150,7 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div ref={dropdownRef} className="md:hidden bg-white p-4 space-y-2 shadow-lg">
+        <div ref={dropdownRef} className="md:hidden absolute bg-white p-4 space-y-2 shadow-lg w-full">
           <Link to="/" className="block text-gray-800 hover:text-blue-500">
             Home
           </Link>

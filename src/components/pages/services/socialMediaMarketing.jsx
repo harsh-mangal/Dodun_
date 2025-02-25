@@ -65,7 +65,7 @@ const socialMediaMarketing = () => {
     </div>
     <TechStack />
     <GetTouch />
-    <Client />
+    {/* <Client /> */}
     <Footer />
     </>
   )

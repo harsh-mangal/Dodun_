@@ -65,7 +65,7 @@ const uiuxDesigning = () => {
     </div>
     <TechStack />
     <GetTouch />
-    <Client />
+    {/* <Client /> */}
     <Footer />
     </>
   )

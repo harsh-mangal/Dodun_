@@ -59,13 +59,10 @@ const Navbar_second = () => {
 
     const handleClickOutside = (event) => {
       // if (window.innerWidth >= 768) {
-        // Only for desktop
-        if (
-          dropdownRef.current &&
-          !dropdownRef.current.contains(event.target)
-        ) {
-          setIsOpen(false);
-          setOpenDropdown(null);
+      // Only for desktop
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+        setOpenDropdown(null);
         // }
       }
     };
@@ -75,7 +72,7 @@ const Navbar_second = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("click", handleClickOutside)
+      window.removeEventListener("click", handleClickOutside);
     };
   }, []);
 
@@ -85,7 +82,7 @@ const Navbar_second = () => {
         bgWhite ? "bg-white" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-4">
+      <div className="container mx-auto md:text-sm lg:text-lg flex items-center justify-between px-4">
         <Link to="/">
           <img
             src="https://ik.imagekit.io/jncw2kb8u/image.png?updatedAt=1738665004511"

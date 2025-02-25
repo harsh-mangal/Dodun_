@@ -65,7 +65,7 @@ const androidAppDevelopment = () => {
     </div>
     <TechStack />
     <GetTouch />
-    <Client />
+    {/* <Client /> */}
     <Footer />
     </>
   )

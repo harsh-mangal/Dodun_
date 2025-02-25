@@ -25,7 +25,7 @@ const aboutUs = () => {
       <BackToTop />
       <Cards />
       {isMobile ? <Who_second></Who_second>: <Who></Who>}
-      <Client />
+      {/* <Client /> */}
       <Footer />
     </>
   );

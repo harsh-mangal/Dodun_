@@ -65,7 +65,7 @@ const iosAppDevelopment = () => {
     </div>
     <TechStack />
     <GetTouch />
-    <Client />
+    {/* <Client /> */}
     <Footer />
     </>
   )

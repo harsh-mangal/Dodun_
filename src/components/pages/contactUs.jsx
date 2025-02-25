@@ -37,10 +37,12 @@ const contactUs = () => {
     try {
       const res = await axios.post("http://localhost:3000/submit", formData);
       if (res.data.error && res.data.error === "Email already exists") {
-        setResponseMessage("Email already exists. Please use a different email.");
+        setResponseMessage(
+          "Email already exists. Please use a different email."
+        );
         return;
-    }
-      
+      }
+
       setShowPopup(true);
       setFormData({
         firstName: "",
@@ -104,12 +106,12 @@ const contactUs = () => {
         {/* Contact Info Section */}
         <div
           data-aos="fade-down"
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left  md:mx-45"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left px-4 md:px-10 lg:px-20"
         >
           {contactInfo.map((item, index) => (
             <div
               key={index}
-              className="p-6 bg-white shadow-md border-4 border-blue-300 transition-transform duration-300 hover:scale-105 hover:shadow-lg mx-auto md:mx-0 w-full max-w-sm"
+              className="p-6 bg-white shadow-md border-4 border-blue-300 transition-transform duration-300 hover:scale-105 hover:shadow-lg mx-auto w-full max-w-sm"
             >
               <i className={`fa-solid ${item.icon} text-blue-300 text-3xl`}></i>
               <h2 className="text-xl font-semibold mt-3">{item.title}</h2>
@@ -117,7 +119,10 @@ const contactUs = () => {
                 {item.description}
               </p>
               {item.link && (
-                <Link to={item.link} className="text-blue-500 hover:underline">
+                <Link
+                  to={item.link}
+                  className="text-blue-500 hover:underline break-words"
+                >
                   {item.linkText}
                 </Link>
               )}
@@ -127,17 +132,19 @@ const contactUs = () => {
 
         {/* Map Section */}
         <div className="mt-10 px-4 flex justify-center">
-          <iframe
-            className="w-full md:w-3/4 h-64 md:h-96 border"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d714.3050127920549!2d76.69969712989423!3d30.713347056154703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1739168399841!5m2!1sen!2sin"
-            allowFullScreen
-            loading="lazy"
-            title="Google Maps"
-          ></iframe>
+          <div className="w-full md:w-7/8 aspect-video border">
+            <iframe
+              className="w-full h-full"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d714.3050127920549!2d76.69969712989423!3d30.713347056154703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1739168399841!5m2!1sen!2sin"
+              allowFullScreen
+              loading="lazy"
+              title="Google Maps"
+            ></iframe>
+          </div>
         </div>
 
         {/* Contact Form Section */}
-        <div className="bg-gradient-to-r from-sky-200 to-blue-400 md:p-10 mt-10 md:mx-50 flex flex-col md:flex-row items-center overflow-hidden shadow-lg">
+        <div className="bg-gradient-to-r from-sky-200 to-blue-400 md:p-10 w-full md:w-7/8 mt-10 md:mx-10 lg:mx-20 flex flex-col md:flex-row items-center overflow-hidden shadow-lg">
           <div data-aos="fade-up-right" className="w-full md:w-1/2">
             <img
               src="https://ik.imagekit.io/jncw2kb8u/blog-listing-hero.svg?updatedAt=1739170233142"
@@ -233,11 +240,16 @@ const contactUs = () => {
               Submit
             </button>
             {responseMessage && (
-                <p className={`mt-4 text-center ${responseMessage.includes("success") ? "text-green-600" : "text-red-600"}`}>
-                    {responseMessage}
-                </p>
+              <p
+                className={`mt-4 text-center ${
+                  responseMessage.includes("success")
+                    ? "text-green-600"
+                    : "text-red-600"
+                }`}
+              >
+                {responseMessage}
+              </p>
             )}
-
           </form>
           {showPopup && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">

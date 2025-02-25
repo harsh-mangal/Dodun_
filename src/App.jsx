@@ -26,6 +26,7 @@ import AnimatedVideos from "./components/pages/services/animatedVideos";
 import DigitalMarketing from "./components/pages/services/DigitalMarketing";
 import Designing from "./components/pages/services/Designing";
 import Development from "./components/pages/services/Development";
+import Career from "./components/pages/Career";
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
         <Route path="/DigitalMarketing" element={<DigitalMarketing />} />
         <Route path="/Designing" element={<Designing />} />
         <Route path="/Development" element={<Development />} />
+        <Route path="/Career" element={<Career />} />
       </Routes>
     </Router>
     </>
