@@ -28,7 +28,7 @@ const getTouch = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:3000/submit", formData);
+      const res = await axios.post("http://localhost:3002/submit", formData);
       if (res.data.error && res.data.error === "Email already exists") {
         setResponseMessage(
           "Email already exists. Please use a different email."

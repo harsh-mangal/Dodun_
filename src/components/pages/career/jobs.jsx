@@ -18,7 +18,7 @@ const jobs = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/jobs");
+        const response = await axios.get("http://localhost:3002/jobs");
         setJobs(response.data);
       } catch (error) {
         console.error("Error fetching jobs:", error);
@@ -53,7 +53,7 @@ const jobs = () => {
     Object.keys(formData).forEach((key) => data.append(key, formData[key]));
 
     try {
-      const res = await axios.post("http://localhost:3000/apply", data);
+      const res = await axios.post("http://localhost:3002/apply", data);
       alert(res.data.message);
       closeForm();
     } catch (err) {
